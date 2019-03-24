@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Latający ptak</title>
+		<link rel="stylesheet" href="main.css">
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js>
+		</script>
+
+	</head>
+	<body>
+	    <div></div>
+		<h1>Latający ptak</h1>
+		<script>
+
+			var Ptak = function(x,y){
+				this.x = x;
+				this.y = y;
+			}
+			
+			var koliber = new Ptak(10,200)
+			koliber;
+			
+
+			Ptak.prototype.rysuj = function () {
+				var ptakHtml = '<img src="bird.png" width=120px height=90px >';
+			
+				this.ptakElement = $(ptakHtml);
+			
+				this.ptakElement.css({
+					position: "absolute",
+					left: this.x,
+					top: this.y
+				});
+			
+				$("body").append(this.ptakElement);
+			};
+			
+			// rysujAuto(tesla);
+            koliber.rysuj()			
+			
+			Ptak.prototype.wPrawo = function () {
+				this.x += 15;
+			
+				this.ptakElement.css({
+					left: this.x,
+					top: this.y /* :) */
+				});
+			};
+            
+			Ptak.prototype.wLewo = function () {
+				this.x -= 15;
+			
+				this.ptakElement.css({
+					left: this.x,
+					top: this.y /* :) */
+				});
+			};
+            Ptak.prototype.wGore = function () {
+				this.y -= 15;
+			
+				this.ptakElement.css({
+					left: this.x,
+					top: this.y /* :) */
+				});
+			};
+			Ptak.prototype.wDol = function () {
+				this.y += 15;
+			
+				this.ptakElement.css({
+					left: this.x,
+					top: this.y /* :) */
+				});
+			};
+			
+            window.addEventListener('keydown', function(event) {
+              switch (event.keyCode) {
+                case 37:
+                     koliber.wLewo(); 
+                break;
+
+                case 38:
+                      koliber.wGore();
+                break;
+
+                case 39:
+                      koliber.wPrawo();
+                break;
+
+                case 40:
+                      koliber.wDol();
+                break;
+              }
+            }, false);
+			
+		</script>
+        <footer>Wykonał Jakub Marchut</footer>
+        
+	</body>
+</html>

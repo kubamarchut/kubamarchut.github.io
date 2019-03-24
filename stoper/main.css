@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Inconsolata');
+            
+            h1{
+                color: #3C4FE0;
+                margin: 20px 0 ;
+            }
+            p{
+                font-family: 'Inconsolata', monospace;
+                font-size: 2em;
+                transition: .2s opacity ease-in-out;
+                margin: 0;
+                color: #5F6FE5;
+            }
+            button{
+                background: #3C4FE0;
+                color: #fff;
+                border: none;
+                border-radius: 2px;
+                padding: 4px 20px;
+                font-size: 1.25em;
+                margin: 20px 10px;
+                transition: .3s background ease-in-out;
+                
+                outline: none;
+            }
+            button:hover{
+                background: #091A9E;
+            }
+            button:active{
+                background: #263AD3;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background: #A4AEFF;
+                text-align: center;
+                font-family: 'Nunito', sans-serif;
+            }
+            div{
+                box-shadow: 0 0 5px 1px rgba(0,0,0,.4);
+                background: #fff;
+                width: 50%;
+                min-width: 310px;
+                position: absolute;
+                top: 50%; left:50%;
+                transform: translate(-50%, -50%);
+                padding: 20px 20px 10px 20px;
+            }
+            footer{
+                font-size: .8em;
+            }

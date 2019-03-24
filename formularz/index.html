@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Jakub Machut - Formularz</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formularz</h1>
+        <p>
+            
+                <img src="img/copenhagen-4054563_640.jpg" alt="zdjęcie">
+                <span class="info">Zdjęcie pięknej architektury Kopenhagi</span>
+            
+            <input type="text" id="nam" placeholder="Tu wpisz imię"><br>
+            <select id="zainteresowania">
+                <option value="0" selected>Wybierz zainteresowanie</option>
+                <option value="wedkarstwo" >Wędkarstwo</option>
+                <option value="kolarstwo">Kolarstwo grawitacyjne</option>
+                <option value="bieganie">Bieganie</option>
+                <option value="java">Java script</option>
+            </select>
+        <button id="send">Wyślij</button><br>
+        <button id="reset">Reset</button>
+        </p>
+        
+        <footer>Wykonał Jakub Marchut</footer>
+    </div>
+    
+    <script>
+        var audio = new Audio('waterdrop.wav');
+        var info = document.querySelector("span");
+        
+        const imie = document.getElementById("nam");
+        const zainteresowania = document.getElementById("zainteresowania");
+        
+        const zdj = document.querySelector("img");
+        const send = document.getElementById("send");
+        const resetBTN = document.getElementById("reset");
+        
+        var sendForm = function(){
+            alert("Witaj "+ imie.value +", dziękuję za przesłanie informacji");
+        }
+        var reset = function(){
+            imie.value = "";
+            zainteresowania.value = "0";
+        }
+        var photoAction = function(){
+            audio.play();
+            info.classList.add("vis");
+        }
+        var photoActionOut = function(){
+            info.classList.remove("vis");
+        }
+        send.addEventListener("click", sendForm);
+        resetBTN.addEventListener("click", reset);
+        zdj.addEventListener("mouseover", photoAction);
+        zdj.addEventListener("mouseout", photoActionOut);
+    </script>
+</body>
+</html>

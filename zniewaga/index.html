@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Losowanie Zniewag</title>
+
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+        h1 {
+            color: #25a18e;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.3em;
+            transition: .2s opacity ease-in-out;
+            margin: 0;
+        }
+
+        p.pre {
+            opacity: 0;
+        }
+
+        button {
+            background: #7ae582;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            padding: 4px 20px;
+            font-size: 1.25em;
+            margin: 20px 0;
+            transition: .3s background ease-in-out;
+        }
+
+        button:hover {
+            background: #25a18e;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #c1ffdd;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        div {
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, .4);
+            background: #fff;
+            width: 50%;
+            min-width: 310px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 20px 10px 20px;
+        }
+
+        footer {
+            font-size: .8em;
+        }
+
+    </style>
+    <div>
+        <h1>Losowanie zniewag</h1>
+        <p>Kliknij w przycisk aby wylosować zniewagę</p>
+        <button>Wylosuj zniewagę</button>
+        <footer>Wykonał Jakub Marchut</footer>
+    </div>
+
+    <script>
+        var losoweSlowo = ["kot", "pies", "osioł", "chomik", "słoń", "koń"];
+        var losowyPrzymiotnik = ["mały", "brudny", "duży", "brzydki"];
+        var losowaCzescCiala = ["ręka", "noga", "twarz", "dłoń"]
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
+        button.addEventListener("click", randomInsult);
+
+        function getRandom(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function randomInsult() {
+            var losowaZniewaga = "Twoja " + losowaCzescCiala[getRandom(losowaCzescCiala.length)] + " jest jak " + losowyPrzymiotnik[getRandom(losowyPrzymiotnik.length)] + " " + losoweSlowo[getRandom(losoweSlowo.length)]
+            p.classList.add('pre');
+            setTimeout(function() {
+                p.innerHTML = losowaZniewaga;
+                p.classList.remove('pre')
+            }, 250)
+
+        }
+
+    </script>
+
+</body>
+
+</html>
