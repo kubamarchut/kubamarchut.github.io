@@ -1,3 +1,4 @@
+lines (75 sloc) 2.4 KB
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -14,7 +15,7 @@
         00:00.0
         </p>
         <button id="controlBTN">Start</button>
-        <footer>WykonaÅ‚ Jakub Marchut</footer>
+        <footer>Wykona³ Jakub Marchut</footer>
     </div>
     
     <script>
@@ -51,8 +52,8 @@
                         ms = 0;
                         s++;
                         if(s == 60) {
-                            s = 0;
-                            m++;
+                            alert("Odliczanie zakoñczone");
+			    reset();
                         }
                     }
                     display.innerHTML = addZero(m)+":"+addZero(s)+"."+ms; 
