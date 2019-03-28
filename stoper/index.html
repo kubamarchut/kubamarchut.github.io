@@ -33,6 +33,10 @@
             return number;
         }
         btn.addEventListener("click", function(){
+	    setTimeout(function (){
+		    alert("Odliczanie zakoñczone");
+			    reset();
+	    }, 60000)
             run = !run;
             btn.innerHTML = "Stop";
             if(firstRun){
@@ -52,9 +56,9 @@
                         ms = 0;
                         s++;
                         if(s == 60) {
-                            alert("Odliczanie zakoñczone");
-			    reset();
-                        }
+                            s = 0;
+			    m++;
+			}
                     }
                     display.innerHTML = addZero(m)+":"+addZero(s)+"."+ms; 
                 }
