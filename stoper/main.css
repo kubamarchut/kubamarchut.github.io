@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito|Inconsolata');
-            
+
             h1{
                 color: #3C4FE0;
                 margin: 20px 0 ;
@@ -20,7 +20,7 @@
                 font-size: 1.25em;
                 margin: 20px 10px;
                 transition: .3s background ease-in-out;
-                
+
                 outline: none;
             }
             button:hover{
