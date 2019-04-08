@@ -11,7 +11,7 @@
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: 40vmin;
+      width: 50vmin;
     }
   </style>
 </head>
@@ -51,36 +51,37 @@
 <circle class="dot" cx="91.758" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="139.38" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="123.51" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="91.758" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="91.758" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="60.008" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="107.63" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="107.63" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="91.758" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="75.883" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="123.51" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="123.51" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="91.758" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="107.63" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="123.51" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="171.13" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="171.13" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="91.758" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="91.758" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="75.883" cy="280.78" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="123.51" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="123.51" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="107.63" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="123.51" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="123.51" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="75.883" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="123.51" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="75.883" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
 <circle class="dot" cx="139.38" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="107.63" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="91.758" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="75.883" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="107.63" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
-<circle class="dot" cx="75.883" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="107.63" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-right" cx="91.758" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="75.883" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="107.63" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
+<circle class="dot smoke-left" cx="75.883" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
 </g>
 </g>
 </g>
 </svg>
 <script>
-  TweenMax.staggerFrom(".dot", 0.8, {opacity:0, delay: 0.5, ease: SlowMo.ease.config(0.1, 2, false)}, 0.01)
+  TweenMax.staggerFrom(".dot", 0.8, {opacity:0, delay: 0.5, ease: SlowMo.ease.config(0.1, 2, false)}, 0.01);
+
 </script>
 </body>
 </html>

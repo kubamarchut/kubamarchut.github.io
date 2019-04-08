@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jakub Marchut">
     <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <title>Zadania JS</title>
 </head>
 
@@ -48,7 +49,25 @@
         li{
             margin: 2px 0;
         }
-        div {
+        #overlay{
+          position: absolute;
+          top: 0;
+          left:0;
+          background: #fff;
+          z-index: 100;
+          width: 100vw;
+          height: 100vh;
+          visibility: visible;
+          opacity: 1;
+          transition: 1s opacity 0s, 1s visibility 1s;
+        }
+        svg{
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50vmin;
+        }
+        .container {
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, .4);
             background: #fff;
             width: 50%;
@@ -58,12 +77,78 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px 20px 10px 20px;
+
         }
 
         footer {
             font-size: .8em;
         }
     </style>
+    <div id="overlay">
+      <?xml version="1.0" encoding="UTF-8"?>
+    <svg version="1.1" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <metadata>
+    <rdf:RDF>
+    <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    </cc:Work>
+    </rdf:RDF>
+    </metadata>
+    <g transform="translate(0,-87)">
+    <g transform="translate(15.875)">
+    <g transform="translate(-10.571 -1.4679)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6">
+
+    <circle class="dot" cx="91.758" cy="280.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="123.51" cy="280.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="139.38" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="60.008" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="75.883" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="123.51" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="139.38" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="60.008" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="107.63" cy="280.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="75.883" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="155.26" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="91.758" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="107.63" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="155.26" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="60.008" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="107.63" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="75.883" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="91.758" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="139.38" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="123.51" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="91.758" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="60.008" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="107.63" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="91.758" cy="264.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="75.883" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="123.51" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="91.758" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="107.63" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="123.51" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="171.13" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="171.13" cy="249.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="91.758" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="75.883" cy="280.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="123.51" cy="153.78" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="107.63" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="123.51" cy="217.28" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="123.51" cy="169.66" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="75.883" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot" cx="139.38" cy="233.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="107.63" cy="185.53" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-right" cx="91.758" cy="106.16" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="75.883" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="107.63" cy="122.03" r="6.6146" style="paint-order:fill markers stroke"/>
+    <circle class="dot smoke-left" cx="75.883" cy="137.91" r="6.6146" style="paint-order:fill markers stroke"/>
+    </g>
+    </g>
+    </g>
+  </svg>
+    </div>
     <div class="container">
         <h1>Lista zadań</h1>
         <ul>
@@ -80,5 +165,12 @@
         </ul>
         <footer>Wykonał Jakub Marchut</footer>
     </div>
+    <script>
+      TweenMax.staggerFrom(".dot", 0.8, {opacity:0, delay: 0.5, ease: SlowMo.ease.config(0.1, 2, false)}, 0.01);
+      window.addEventListener("load", function(){
+        overlay.style.opacity = 0;
+        overlay.style.visibility = "hidden";
+      })
+    </script>
 </body>
 </html>
