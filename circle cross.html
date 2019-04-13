@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <style>
+    svg{
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50vmin;
+    }
+  </style>
+</head>
+<body>
+  <?xml version="1.0" encoding="UTF-8"?>
+<svg width="210mm" height="210mm" version="1.1" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(0,-87)">
+<path id="start" d="m40.12 256.32 65.347-64.493 64.92 65.774-65.774-66.201h0.85424l64.493-64.066-64.92 64.493-65.347-65.347" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.4437"/>
+</g>
+<path id="end" d="m177.47 105a72.473 72.473 0 0 1-72.473 72.473 72.473 72.473 0 0 1-72.473-72.473 72.473 72.473 0 0 1 72.473-72.473 72.473 72.473 0 0 1 72.473 72.473z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.4261" style="paint-order:fill markers stroke"/>
+</svg>
+
+<script>
+  TweenMax.to("#start", 5, {morphSVG:"#end"})
+</script>
+</body>
+</html>
