@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sudoku</title>
+		<meta name="author" content="Jakub Marchut">
+		<meta name="keywords" content="JavaScript, JS, ładne, proste, sudoku, online, minimalistyczne">
+		<meta name="description" content="Po prostu piękne sudoku online">
+		<link rel="Stylesheet" type="text/css" href="css/sudoku.css"/>
+		<link rel="Stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+        <div class="monit">Aby zagrać w sudoku<br>obróć ekran<br><i class="material-icons">screen_rotation</i></div>
+		<div id="container">
+            <button onclick="menuSlide()" class="hamburger"><span class="st j"></span><span class="st d"></span><span class="st t"></span></button>
+            <header><h1>Sudoku</h1>
+            <div class="controls">
+            <button class="button-with-tooltip">Nowa gra<span class="tooltip-text">Kliknij aby wylosować nową planszę</span></button>
+            <span class="clock">0:00</span>
+            <button class="button-with-tooltip">Reset<span class="tooltip-text">Kliknij aby wyczyścić planszę</span></button>
+            </div>
+            </header>
+			<article>
+				<div class="playarea">
+                </div>
+                <div class="numpad"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><br><button>6</button><button>7</button><button>8</button><button>9</button><button>X</button></div>
+			</article>
+            <div class="fba" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="checking()">
+                <i class="material-icons">done</i>
+                <span class="tooltip-text-small">Sprawdź!</span>
+            </div>
+            <div class="modal">
+                Pozostało 30 pustych pól<br>
+                Chcesz sprawdzić uzupełnione pola?<br>
+                <button>Tak</button>
+                <button>Nie</button>
+            </div>
+            <div class="modal big">
+                    <h2>Piliki cookies</h2>
+                    Ponieżej zostały opisane wszystkie cele do których wykorzystywane są pliki cookies na tej stronie, aby uniemożliwić zapisywanie plików cookies przez tą stronę musisz zmienić ustawienia swojej przeglądarki internetowej.
+                    <ol style="font-family: 'Roboto', sans-serif">
+                        <li>Zapisywanie wybranego motywu kolorystycznego<br>
+							<span class="des">Piliki cookies zapisują wybrany przez użytkownika motyw kolorystyczny, tak aby po, każdym uruchomieniu i/lub odświeżniu strona otwierała się w tym stylu, który wybierze użytkownik.</span>
+						</li>
+                        <li>Przechowywanie numerów wylosowanych plansz<br>
+							<span class="des">W celu zapewnienia największego komfortu strona zapisuje numery wylosowanych planszy tak, aby użytkownik nie wylosował dwukrotnie tej samej łamigłówki.</span>
+						</li>
+                    </ol>
+                <button onclick="closeModal(1)">Zamknij</button>
+                </div>
+            <footer>&copy; Wszelkie prawa zastrzeżone 2019</footer>
+
+        </div>
+        <div class="menu">
+            <h2>Ustawienia</h2>
+            <ul>
+                <li>Automatyczne sprawdzanie</li>
+                <li>Wyróżnianie pól</li>
+                <li>Zmień kolor tła <button onclick="openBox(this)"><i class="material-icons">color_lens</i></button><div class="colorPicker">
+                    <div class="colorCircle" onclick='changeColor("raspberry")'></div><div class="colorCircle" onclick='changeColor("green")'></div><div class="colorCircle" onclick='changeColor("blue")'></div><div class="colorCircle" onclick='changeColor("violet")'></div><div class="colorCircle" onclick='changeColor("darkblue")'></div><div class="colorCircle" onclick='changeColor("beige")'></div><div class="colorCircle" onclick='changeColor("black")'></div></div>
+                </li>
+                <li>Zmień poziom trudności <button><i class="material-icons">arrow_drop_down</i></button></li>
+            </ul>
+            <div class="info">
+                <button onclick="openModal(1)">Informacje o projekcie</button><br>
+
+                <a href="#">Sposób wykorzystania plików cookies</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/cookies.js"></script>
+        <script>
+            var currentTask
+            function main(){
+                if(getCookie("currentTask") == ""){
+                    var currentTask = makeRandomNumber(1, 10);
+                    fill(task[random]);
+                    setCookie("currentTask", random, 10);
+                }
+                else{
+                    var currentTask = getCookie("currentTask");
+                }
+            }
+            function getNewTask(){
+                getCookie("oldTask")
+                while(done != true){
+
+                }
+            }
+        </script>
+        <script>
+            function closeModal(i){
+                var modal = document.getElementsByClassName("modal")[i];
+                modal.classList.remove("open");
+            }
+            var time = "0:00";
+            var fromBlocks = new Array(81);
+            function makeBlocks() {
+                var elementsOfdiv = "";
+                for(var i = 0; i<81; i++){
+                    elementsOfdiv += '<div id="'+i+'" class="blok" style="';
+                    if (i%9==8) elementsOfdiv += ' border-right: none;';
+                    if (i%3==2) elementsOfdiv += ' border-right-width: 2px;';
+                    if (i > 17 && i < 27) elementsOfdiv += ' border-bottom-width: 2px;';
+                    if (i > 44 && i < 54) elementsOfdiv += ' border-bottom-width: 2px;';
+                    if (i > 71) elementsOfdiv += ' border-bottom: none;';
+                    elementsOfdiv += '"><input type="number" onclick="highlight(this.value)" onchange="check(this)" min=1 max=9></div>';
+                }
+                document.getElementsByClassName("playarea")[0].innerHTML = elementsOfdiv;
+            }
+            makeBlocks();
+            function properValues(a){
+                var answer = false;
+                if (a != ""){
+                    if (a>=1 && a<=9) answer = true;
+                }
+                return answear;
+            }
+            function check(a){
+                var b = a.value;
+                if(b == "") {
+                    unMark(a.parentElement.id, "wrong");
+                }
+                else if (properValues(b)){
+                    unMark(a.parentElement.id, "wrong");
+                    highlight(b);
+                }
+                else mark(a.parentElement.id, "wrong");
+            }
+            function mark(nr, what){
+                var div = document.getElementById(nr);
+                div.classList.add(what);
+            }
+			function unMark(nr, what){
+                var div = document.getElementById(nr);
+                div.classList.remove(what);
+            }
+			var h = false;
+			var cpOfa;
+			function highlight(a){
+				if(properValues(a)){
+					if(cpOfa == a){
+						for(var i = 0; i<fromBlocks.length; i++){
+							unMark(i, "highlight");
+						}
+						cpOfa = "";
+					}
+					else{
+						if(h == true){
+							for(var i = 0; i<fromBlocks.length; i++){
+								unMark(i, "highlight");
+							}
+							h = false;
+						}
+						getData();
+						for(var i = 0; i<fromBlocks.length; i++){
+							if (fromBlocks[i] == a) {
+								mark(i, "highlight");
+							}
+						}
+						h = true;
+						cpOfa = a;
+					}
+				}
+			}
+            function checking(){
+				var modal = document.getElementsByClassName("modal");
+                getData();
+                var numberOfEmpty = 0;
+                for(var i = 0; i<fromBlocks.length; i++){
+                    if (fromBlocks[i] == "") {
+                        numberOfEmpty++;
+                    }
+                }
+                if (numberOfEmpty > 0) {
+                    modal[0].innerHTML = 'Pozostało '+numberOfEmpty+' pustych pól<br>Chcesz sprawdzić uzupełnione pola?<br><button onclick="finalCheck()">Tak</button><button onclick="closeModal(0)">Nie</button>'
+                    modal[0].classList.add("open");
+                }
+                else {
+                    finalCheck();
+                }
+            }
+            function finalCheck(){
+				var modal = document.getElementsByClassName("modal");
+                closeModal(0);
+                compare2(fromBlocks, oneAns);
+                    if (compare2(fromBlocks, oneAns) == true){
+                        modal[0].innerHTML = 'Gratuluję, udało Ci się rozwiązać sudoku w '+time+'<br>Chcesz rozwiązać kolejne sudoku?<br><button>Tak</button><button onclick="closeModal(0)">Nie</button>';
+                        modal[0].classList.add("open");
+                    }
+                    else {
+                        modal[0].innerHTML = 'Mhm, nie wiele Ci brakuje<br>Sprawdź pola zaznaczone na czerwono<br><button onclick="closeModal(0)">Ok</button>';
+                        modal[0].classList.add("open");
+                    }
+            }
+            function getData(){
+                for(var i = 0; i<81; i++){
+                    var c = document.getElementById(i).children;
+                    fromBlocks[i] = c[0].value;
+                }
+            }
+            /*function generateArr(){
+                var e =0;
+                for(var i = 0; i<9; i++){
+                    for(var j = 0; j<9; j++){
+                        eval("var lines"+i+" ='new array(9)'" );
+                        name[i] = fromBlocks[e];
+                        e++;
+                    }
+                }
+            }*/
+            function compare(arr){
+                for(var i = 0; i<arr.length; i++){
+                    for(var j = 0; j<arr.length; j++){
+                        if (i != j){
+                            if(arr[i] == arr[j]){
+                                 console.log(i+"and"+j+"are the same");
+                                 break;
+                            }
+                        }
+                    }
+                }
+            }
+            function compare2(arr, arr1){
+		var answer = true;
+                for(var i = 0; i<arr.length; i++){
+                    if(arr[i] != arr1[i]){
+                        mark(i, "wrong");
+                        answer = false;
+                    }
+                }
+                return answer;
+            }
+
+            function fill(arr){
+                for(var i = 0; i<arr.length; i++){
+                    var c = document.getElementById(i).children;
+                    c[0].value = arr[i];
+                     if (arr[i] != ""){
+                        c[0].readOnly = true;
+                        mark(i, "filled");
+                    }
+                }
+                console.log(getCookie("one"));
+            }
+            var one =["","",2,"","",8,9,3,"","","","","","",1,"","",5,"",1,"","",7,"","",8,2,"","","","","","",6,"",9,9,"",4,"",1,"",8,"",7,6,"",7,"","","","","","",7,6,"","",9,"","",4,"",8,"","",6,"","","","","","",4,1,7,"","",5,"",""];
+            var oneAns =[5,7,2,4,6,8,9,3,1,4,9,8,2,3,1,7,6,5,3,1,6,5,7,9,4,8,2,1,3,5,8,4,7,6,2,9,9,2,4,3,1,6,8,5,7,6,8,7,9,5,2,3,1,4,7,6,3,1,9,5,2,4,8,8,5,9,6,2,4,1,7,3,2,4,1,7,8,3,5,9,6];
+            fill(one);
+            function makeRandomNumber(min, max){
+                return Math.floor(Math.random()*(max-min+1)+min);
+            }
+            function starter(){
+                alert(makeRandomNumber(1, 10));
+            }
+            starter();
+        </script>
+
+        <script type="text/javascript" src="js/basic.js"></script>
+	</body>
+</html>

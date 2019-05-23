@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Varela');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+*   {
+    font-family: 'Varela', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: var(--main-txt-color);
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+.monit{
+    font-size: 2em;
+    background: var(--main-bg-color);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 30vh 0;
+    display: block;
+    z-index: 1000;
+}
+.monit i{
+    padding: 10px 0;
+    font-size: 1em;
+}
+ul{
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+ul li{
+    height: 30px;
+    text-align: left;
+    margin: 5px 0;
+    position: relative;
+}
+ul li button{
+    position: relative;
+    padding: 0;
+    vertical-align: middle;
+    float: right;
+}
+#container{
+    transition: .4s margin cubic-bezier(.55,0,.1,1);
+    overflow: hidden;
+}
+h2 {
+    font-size: 1.45em;
+    margin: .55em 0;
+}
+button{
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    transition: .3s ease-in-out color;
+}
+button:hover, button:focus{
+    color: var(--hover-color);
+}
+.menu   {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: .4s all cubic-bezier(.55,0,.1,1);
+    background: var(--main-bg-color);
+    z-index: 1;
+    padding: 10px;
+  overflow-x: hidden;
+    -webkit-box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0);
+-moz-box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0);
+box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0);
+}
+.menu.open{
+    transform: translateX(0);
+    -webkit-box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0.75);
+-moz-box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0.75);
+box-shadow: 200px 0px 5px 2000px rgba(0,0,0,0.75);
+}
+.info{
+    font-size: .95em;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+.controls button    {
+    width: 35vmin;
+}
+.clock{
+    padding: 0 10px;
+}
+body{
+    height: 100%;
+    background-color: var(--main-bg-color); 
+    margin:0;
+    padding: 0;
+    transition: .4s background-color ease-in-out;
+}
+.hamburger    {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    background-color: none;
+    outline: none;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box ;
+    z-index: 20;
+    transition: .4s left cubic-bezier(.55,0,.1,1);
+}
+h1  {
+    font-size: 2em;
+    margin: .3em 0 .1em 0;
+}
+article{
+    position: relative;
+}
+.playarea{
+    position: relative;
+    margin: 10px auto;
+    width: 90vmin;
+    height: 90vmin;
+    border: 2px solid var(--main-txt-color);
+}
+.blok{
+    width: calc(100%/9);
+    height: calc(100%/9);
+    float: left;
+    border-right: 1px solid var(--main-txt-color);
+    border-bottom: 1px solid var(--main-txt-color);
+    transition: .3s background-color ease-in-out;
+}
+.blok input{
+	transition: .3s background-color ease-in-out;
+    font-size: 1.5em;
+	margin-top: 1%;
+    width: 98%;
+    height: 98%;
+    border: none;
+	border-radius: 50%;
+	border: 0px solid #fff;
+    background: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+.blok:hover {
+    background-color: rgb(255, 255, 255, .25);
+}
+.blok.wrong {
+    background-color: #ff222240;
+}
+.blok.wrong input   {
+    color: #ff2222;
+}
+.blok.filled input{
+    color: var(--hover-color);
+}
+.blok.filled:hover {
+    background-color: transparent;
+}
+.blok.highlight input{
+    background-color: var(--highlight-color);
+	border-radius: 50%;
+	transition: .3s background-color ease-in-out;
+}
+.numpad{
+    margin: 0 0 40px 0;
+}
+.ad{
+    margin: 0 0 30px 0;
+}
+.numpad button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin: 1vw;
+    width: 15vw;
+    height: 15vw;
+    border: 1px solid var(--main-txt-color);
+    border-radius: 50%;
+}
+.colorPicker{
+    z-index:0;
+    padding: 5px;
+    top: -150%;
+    left: 75%;
+    z-index: 100;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    height: 145px;
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
+    transition: .3s all ease-in-out;
+    width: 117px;
+    transform: scale(0);
+	overflow-y: auto;
+}
+.colorPicker.open{
+    transform: scale(1);
+    top: 90%;
+    left: 65%;
+    z-index: 2;
+}
+.colorCircle:first-child{
+    background-color: #dd2c44; 
+}
+.colorCircle:nth-child(2){
+    background-color: #247c0c;
+}
+.colorCircle:nth-child(3){
+    background-color: #2d4dc4;
+}
+.colorCircle:nth-child(4){
+    background-color: #680d60;
+}
+.colorCircle:nth-child(5){
+    background-color: #061b47;
+}
+.colorCircle:nth-child(6){
+    background-color: #724141;
+}
+.colorCircle:last-child{
+    background-color: #000000;
+}
+.colorCircle{
+    margin: 5px;
+    padding: 0;
+    position: relative;
+    display: inline-flex;
+    background-color: #647517;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(237,237,237,1);
+    -moz-box-shadow: 0px 0px 1px 2px rgba(237,237,237,1);
+    box-shadow: 0px 0px 1px 2px rgba(237,237,237,1);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+input{
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+@media screen and (orientation: portrait){
+  .monit{
+      display: none;
+}
+}
+@media screen and (min-width: 767.98px){
+    h1{
+        margin: .6em 0;
+    }
+    .monit{
+      display: none;
+}
+    #container.open{
+        margin-left: 300px;
+    }
+    body{
+        overflow: hidden;
+    }
+    .hamburger    {
+        position: absolute;
+        left: 10px;
+        top: 1.5em;
+    }
+    .controls button    {
+        width: 25vmin;
+    }
+    .clock{
+        padding: 0 50px;
+    }
+    article{
+        height: 80vh;
+    }
+    .playarea{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 75vmin;
+        height: 75vmin;
+        transform: translate(-50%,-50%);
+        margin: 0;
+    }
+    .numpad{
+        display: none;
+    }
+    footer{
+        position: relative;
+    }
+
+}

@@ -1,0 +1,221 @@
+:root{
+    --main-bg-color: #fff;
+    --main-txt-color: #000;
+    --fab-color: #30e532;
+    --highlight-color: #b3e0ff;
+    --hover-color: #5d5d5d;
+}
+.hamburger.pressed{
+    left: 255px;
+}
+.hamburger:focus	{
+    outline: 0;
+}
+.hamburger .st    {
+    background-color: var(--main-txt-color);
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.hamburger .st.j{
+    top: 30%;
+    transition: top .2s ease-out .2s, transform .2s ease-in 0s;
+}
+.hamburger .st.t{
+    top: 70%;
+    transition: top .2s ease-out .2s, transform .2s ease-in 0s;
+}
+.hamburger .st.d{
+    transition-delay: .2s;
+}
+.hamburger.pressed .st.j {
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: top .2s ease-in 0s, transform .2s ease-out .2s;
+}
+.hamburger.pressed .st.t {
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: top .2s ease-in 0s, transform .2s ease-out .2s;
+}
+.hamburger.pressed .st.d {
+    transform: translate(-50%, -50%);
+    width:0;
+    transition-delay: .2s;
+}
+a   {
+    text-decoration: none;
+    color: var(--main-txt-color);
+    transition: .3s color ease-in-out; 
+}
+a:hover{
+    color: #5d5d5d;
+}
+.modal  {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-bg-color);
+    min-width: 320px;
+    padding: 5vmin;
+    font-size: 1.35em;
+    -webkit-box-shadow: 0px 5px 10px 2.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 10px 2.5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 10px 2.5px rgba(0,0,0,0.75);
+	-webkit-transform: translate(-50%, -50%) scale(0.7);
+	-moz-transform: translate(-50%, -50%) scale(0.7);
+	-ms-transform: translate(-50%, -50%) scale(0.7);
+	transform: translate(-50%, -50%) scale(0.7);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+    visibility: hidden; 
+    z-index: 100;
+}
+.modal.open {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+	-moz-transform: translate(-50%, -50%) scale(1);
+	-ms-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+    visibility: visible;
+}
+.modal:hover    {
+    -webkit-box-shadow: 0px 5px 10px 2.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 10px 2.5px rgba(0,0,0,0.75);
+    box-shadow: 0px 2.5px 5px 1px rgba(0,0,0,0.75);
+}
+.modal.big{
+    font-size: 1.05em;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.modal.big ol{
+    padding: 0;
+}
+.fba{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--fab-color);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 2px #666;
+    transition: .3s ease-in-out all;
+}
+.fba:hover  {
+    box-shadow: 0px 0px 5px 1px #666;
+}
+.fba:active  {
+    box-shadow: 0px 0px 2.5px 1px #666;
+    width: 50px;
+    height: 50px;
+    right: 32.5px;
+    bottom: 32.5px;
+}
+.fba:active i{
+    font-size: 2.25em;
+}
+.fba i{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out font-size;
+    font-size: 2.5em;
+    color: var(--main-bg-color);
+}
+.info button{
+    text-transform: none;
+}
+ol{
+  list-style-position: inside;
+}
+ol li {
+    margin: 10px 0;
+	
+	font-size: 1.15em;
+	
+}
+ol li .des{
+	font-size: .85em;
+  font-family: 'Roboto', sans-serif;
+}
+.tooltip-text{
+    visibility: hidden;
+    width: 0;
+    background-color: var(--fab-color);
+    color: #fff;
+    text-align: center;
+    font-size: .8em;
+  border-radius: 24px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all .2s ease-in-out;
+  height: 0;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.button-with-tooltip{
+	position: relative;
+}
+
+.tooltip-text-small{
+    visibility: hidden;
+    width: 0;
+    background-color: var(--fab-color);
+    color: #fff;
+    text-align: center;
+    font-size: 0em;
+  border-radius: 24px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all .2s ease-in-out;
+  height: 0;
+}
+.ad{
+    width:320px;
+    height: 50px;
+    background-image: url(../unnamed.png)
+}
+@media screen and (min-width: 767.98px){
+    .fba{
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    }
+    .fba:hover  .tooltip-text-small{
+    visibility: visible;
+  opacity: 1;
+  height: 30px;
+  width: 100px;
+    font-size: 1em;
+}
+.button-with-tooltip:hover .tooltip-text {
+  
+  visibility: visible;
+  opacity: 1;
+  height: 24px;
+  width: 300px;
+}
+    
+}
