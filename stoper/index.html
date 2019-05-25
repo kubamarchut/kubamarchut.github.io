@@ -17,7 +17,7 @@
         <button id="controlBTN">Start</button>
         <footer>Wykonał Jakub Marchut</footer>
     </div>
-    
+
     <script>
         var run = false;
         var firstRun = true;
@@ -27,14 +27,14 @@
         var m = 0;
         const btn = document.getElementById("controlBTN");
         const display = document.getElementById("countdown");
-        
+
         function addZero(number){
             if(number<10) number = "0" + number;
             return number;
         }
         btn.addEventListener("click", function(){
 	    setTimeout(function (){
-		    alert("Odliczanie zakoñczone");
+		    alert("Odliczanie zakończone");
 			    reset();
 	    }, 60000)
             run = !run;
@@ -60,7 +60,7 @@
 			    m++;
 			}
                     }
-                    display.innerHTML = addZero(m)+":"+addZero(s)+"."+ms; 
+                    display.innerHTML = addZero(m)+":"+addZero(s)+"."+ms;
                 }
                 else{
                     clearInterval(stoper);
