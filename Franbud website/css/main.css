@@ -79,6 +79,7 @@ h2{
 @media (min-width: 750px) {
   #container{
     width: 80%;
+    max-width: 1500px;
     height: 90%;
     max-height: 650px;
     position: absolute;
