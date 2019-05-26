@@ -1,0 +1,108 @@
+body{
+  background: url(brickwall-3476655_1920.jpg);
+  background-size: cover;
+  padding: 0;
+  margin:0;
+}
+
+.box
+{
+  box-sizing: border-box;
+   margin: auto;
+   width: 100%;
+   height: 100%;
+   font-family: Arial;
+   font-size: 15px;
+   color: white;
+    padding: 20px;
+  background: #000000aa;
+   
+}
+h2{
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1px
+}
+.img
+{
+    margin: 20px;
+	width: 100px;
+}
+
+.logo
+{
+   height: 20%;
+   color: white;
+   font-family: 'Righteous', cursive;
+   font-size: 50px;
+   text-align: center;
+   text-shadow: 4px 4px 8px silver;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   padding: 20px;
+}
+
+.kol1
+{ 
+   width: 100%;
+}
+.kol2
+{ 
+   width: 100%;
+}
+.kol3
+{ 
+   width: 100%;
+}
+.stopka
+{
+  padding-top: 40px;
+  text-align:center;
+   clear: both;
+}
+@media (min-width: 450px) {
+  .img{
+    width: 150px;
+  }
+  .col{
+    font-size: 10px;
+  }
+}
+@media (min-width: 750px) {
+  .box{
+    width: 80%;
+    margin: 40px auto;
+  }
+  .img{
+    width: 250px;
+  }
+  .kol2{
+    display: none;
+  }
+  .kol1, .kol2, .kol3{
+    width: calc(100% / 2);
+    float: left;
+    font-size: 11px;
+  }
+  .kol3{
+    float: right;
+  }
+}
+@media (min-width: 950px) {
+  .img{
+    width: 300px;
+  }
+  .box{
+    width: 70%;
+    max-width: 1300px;
+  }
+}
+@media (min-width: 1050px) {
+  .kol2{
+    display: block;
+  }
+  .kol1, .kol2, .kol3{
+    width: calc(100% / 3);
+    float: left;
+    font-size: 12px;
+  }
+}
