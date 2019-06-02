@@ -2,48 +2,40 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Fran-bud - usługi budowlane</title>
+  <title>Fran-bud - o firmie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/subsites.css">
 </head>
 <body>
   <nav id="navbar">
-    <img class="hero" src="img/hero.svg">
+    <img class="hero" src="../img/hero.svg">
     <ul id="menu">
-      <li><a href="ofirmie/">O firmie</a></li>
-      <li><a href="uslugi/">Usługi</a></li>
-      <li><a href="kontakt/">Kontakt</a></li>
+      <li><a href="../ofirmie/">O firmie</a></li>
+      <li><a href="../uslugi/">Usługi</a></li>
+      <li><a href="../kontakt/">Kontakt</a></li>
     </ul>
     <button><i class="material-icons">menu</i></button>
   </nav>
   <header>
     <h1>Fran-BUD</h1>
     <span style="font-weight: bold">Jeśli szukasz profesionalnej firmy budowlanej to świetnie trafiłeś</span><br>
-    <a href="kontakt">Zadzwoń już dziś!</a>
+    <a href="../kontakt/">Zadzwoń już dziś!</a>
   </header>
   <section>
-    <article>
-      <img src="img/uslugi.svg">
-      <h3><a href="uslugi/">Usługi</a></h3>
-      <p>Oferujemy wiele usług związanych z branżą budowlaną.<br>
-        Nasze wieloletnie doświadczenie pozwala na sprostanie wymagającym projektom, ale przede wszystkim na fachowe wykonanie powierzonych zadań.</p>
-    </article>
-    <article>
-      <img src="img/ofirmie.svg">
-      <h3><a href="ofirmie/">O firmie</a></h3>
-      <p>Firma Fran-bud powstała w 2001 roku. Mając na koncie wiele poważnych inwestycji, jesteśmy pewni swoich możliwości w wykonaniu każdego, nawet bardzo wymagającego zadania.</p>
-    </article>
-    <article>
-      <img src="img/kontakt.svg">
-      <h3><a href="kontakt/">Kontakt</a></h3>
-        <h2>Zadzwoń do nas</h2>
-        <p><i class="material-icons">phone</i>+48 502 548 785</p>
-        <h2>Napisz do nas</h2>
-        <p><i class="material-icons">mail_outline</i>kontakt@franbud.pl</p>
-        <h2>Odwiedź nas</h2>
-        <p><i class="material-icons">location_on</i>ul. Belwederska 31, Warszawa</p>
+     
+    <article style="text-align: left">
+     <img src="../img/building-1080591_1920.jpg" alt="Robotnik" id="mapid" style="object-fit: cover">
+      <h1>
+        Kilka słów o naszej firmie
+      </h1>
+       <p>Fran-bud to firma, której pracownicy wysoko cenią sobie jakość. Naszą misją jest zmienianie świata w takim sposób aby każby mógł czerpać z niego jak najwięcej.</p>
+        <p>
+          Specjalizujemy się w kompleksowych remontach domów jednorodzinnych oraz mieszkań. Jako moda firma czekamy na nowe wyzwania. Kierujemy się przede wszystkim jakością i zawsze stawiamy ją na pierwszym miejscu.
+        </p>
+        <h2 class=cta>Pozwól nam rozwiązać swój problem</h2>
     </article>
   </section>
   <footer>
@@ -70,8 +62,8 @@
    Wykonał Jakub Marchut
    </div>
   </footer>
-  
   <script>
+
     function calculate(){
       var y = window.scrollY;
       var navbar = document.getElementById('navbar');

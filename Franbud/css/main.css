@@ -3,7 +3,7 @@
 .hero{
     width: 100px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 0;
     transition: .2s ease-in-out;
   }
@@ -65,6 +65,14 @@ nav ul li{
   transition: .2s ease-in-out;
   width: 100%;
 }
+nav ul li a{
+  text-decoration: none;
+  color: #000;
+  transition: .2s ease-in-out;
+}
+nav ul li a:hover{
+  color: #E63946;
+}
 nav button{
   background: none;
   border: none;
@@ -124,6 +132,14 @@ box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   
   font-size: 9px;
   width: calc(100% - 10px);
+}
+article h3 a{
+  text-decoration: none;
+  color: #000;
+  transition: .2s ease-in-out;
+}
+article h3 a:hover{
+  color: #E63946;
 }
 .row{
   font-size: 9px;
@@ -207,7 +223,7 @@ footer .row{
   }
   .hero{
     width: 250px;
-    top: 30px;
+    top: 20px;
   }
   article:nth-child(2){
     display: none;
