@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Orbitron&display=swap');
+
+.hero{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: .2s ease-in-out;
+  }
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.material-icons{
+  margin-right: 10px;
+  display: inline-flex;
+    vertical-align: top;
+  font-size: 24px;
+}
+nav{
+  background: #fff;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  transition: .2s ease-in-out;
+  z-index: 100;
+  height: 100px;
+}
+nav img{
+  float: left;
+}
+.active{
+  background: #ffffffe6;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+}
+.active .hero{
+  width: 100px;
+}
+.active ul li{
+  padding: 25px 20px;
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  background: #fff;
+  transform: translateY(84px);
+}
+.show{
+  display: block;
+}
+nav ul li{
+  
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px 20px; 
+  transition: .2s ease-in-out;
+  width: 100%;
+}
+nav button{
+  background: none;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
+nav button .material-icons{
+  font-size: 34px;
+  color: #090c9b;
+  margin: 0;
+}
+header{
+  color: #fff;
+  background: url(../img/architecture-1840297_1920.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 230px 0 210px 0;
+  font-size: 1.1em;
+}
+header h1{
+  font-size: 3em;
+  font-family: 'Orbitron', sans-serif;
+}
+header a{
+  color: #fff;
+  text-decoration: none;
+  background: #E63946;
+  font-size: 1.2em;
+  margin: 40px 0;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+  transition: .2s ease-in-out;
+}
+header a:hover{
+  background: #D23440;
+}
+section{
+  width: 95%;
+  max-width: 1500px;
+  margin: auto;
+  transform: translateY(-120px)
+}
+article{
+  background: #fff;
+  float: left;
+  margin: 15px 5px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  
+  font-size: 9px;
+  width: calc(100% - 10px);
+}
+.row{
+  font-size: 9px;
+}
+article h3{
+  margin-top: 0;
+}
+article img{
+  height: 150px;
+}
+article:nth-child(3) p{
+      line-height: 24px;
+}
+article:nth-child(3) h2{
+  font-size: 18px;
+  margin: 0px 10px;
+}
+article h3{
+  font-size: 2em
+}
+footer{
+  width: 100%;
+  clear: both;
+  color: #fff;
+  background: #303030;
+  padding: 20px 0;
+}
+footer .container{
+  width: 80%;
+  max-width: 1500px;
+  margin: auto;
+  background: #303030;
+}
+footer .row{
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+
+@media (min-width: 450px) {
+  header{
+    padding: 180px 0;
+  }
+  .hero{
+    width: 150px;
+  }
+  article, .row{
+    font-size: 10px;
+  }
+  article h1{
+    font-size: 4em;
+  }
+  article:nth-child(3) h2{
+    display: none;
+  }
+  article img{
+    float: left;
+  }
+}
+@media (min-width: 750px) {
+  header{
+    padding: 230px 0 210px 0;
+  }
+  nav button{
+    display: none;
+  }
+  nav{
+    height: auto;
+  }
+  nav ul{
+    display: block;
+    transform: translateY(0);
+    background: transparent;
+  }
+  nav ul li{
+    width:auto
+  }
+  section{
+    width: 80%;
+  }
+  .hero{
+    width: 250px;
+    top: 30px;
+  }
+  article:nth-child(2){
+    display: none;
+  }
+  article:nth-child(3) h2{
+    display: block;
+  }
+  article{
+  width: calc((100% - 60px)/2);
+    float: left;
+    font-size: 11px;
+    margin: 0 15px;
+    height: 500px;
+  }
+  .row{
+    font-size: 11px;
+  }
+  article:nth-child(3){
+    float: right;
+  }
+  article img{
+    float: none;
+  }
+  footer .row{
+    width: calc(100% / 3);
+    float: left;
+    margin-bottom: 30px;
+  }
+  nav ul li{
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 70px 20px; 
+  transition: .2s ease-in-out;
+  
+}
+}
+@media (min-width: 950px) {
+  .hero{
+    width: 300px;
+  }
+
+}
+@media (min-width: 1050px) {
+
+  article:nth-child(2){
+    display: block;
+  }
+  article{
+    width: calc((100% - 90px)/3);
+    float: left;
+    font-size: 12px;
+  }
+  .row{
+    font-size: 12px;
+  }
+}
