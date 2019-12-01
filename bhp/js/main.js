@@ -1,5 +1,7 @@
 var button = document.getElementsByTagName('button')[0]
 var startScreen = document.getElementsByClassName('startScreen')[0]
+var cards = []
+
 
 var jsonx = JSON.parse('{"c":[{"n":"Postepowanie w związku z wypadkiem przy pracy, chorobie zawodowej i świadczenia z tego tytułu","p":[{"p":"Co to jest wypadek przy pracy?","o":"Wypadek przy pracy to zdarzenie nagłe, wywołane przyczyną zewnętrzną, powodujące uraz lub śmierć, które nastąpiło w związku z wykonywana pracą."},{"p":"Co to jest choroba zawodowa?","o":"Za chorobę zawodową uważa się chorobę, jeżeli w wyniku oceny warunków pracy można stwierdzić bezspornie lub z wysokim prawdopodobieństwem, że została spowodowana działaniem czynników szkodliwych dla zdrowia występujących w środowisku pracy, albo w związku ze sposobem wykonywania pracy ( zwanych narażeniem zawodowym )"},{"p":"Komu należy zgłosić podejrzenie o chorobę zawodową?","o":"Każde podejrzenie o chorobę zawodową musi być zgłoszone na piśmie do właściwego inspektora sanitarnego oraz właściwego okręgowego inspektora pracy."},{"p":"Kto upoważniony jest do rozpoznania choroby zawodowej?","o":"Upoważnione do rozpoznania choroby zawodowej są następujące jednostki:poradnia chorób zawodowych klinika chorób zawodowych wchodzące w skład odpowiednich zakładów służby zdrowia, akademii medycznych, instytutów naukowo-badawczych."},{"p":"Komu przysługują świadczenia z tytułu wypadku przy pracy i choroby zawodowej?","o":"Świadczenia  z tytułu wypadku i chorób zawodowych przysługują pracownikom, którzy doznali uszczerbku na zdrowiu oraz członkom rodzin pracowników zmarłych w skutek wypadku lub choroby."},{"p":"Jakie znasz świadczenia z tytułu wypadku przy pracy i choroby zawodowej?","o":"zasiłek chorobowy świadczenie rehabilitacyjne zasiłek wyrównawczy jednorazowe odszkodowanie dodatek pielęgnacyjny renta szkoleniowa (jeśli musi się przekwalifikować) renta z tytułu niezdolności do pracy renta rodzinna"},{"p":"Wymień przynajmniej 5 chorób zawodowych","o":"Astma oskrzelowa pylica płuc beryloza byssinoza przewlekłe choroby narządu głosu"}]},{"n":"Oświetlenie pomieszczeń i stanowisk pracy","p":[{"p":"Jakie są 3 podstawowe zasady dobrego oświetlenia?","o":"fizjologiczne - wynikające z analizy parametrów oświetlenia wpływających na jakość widzenia estetyczne - wynikające z analizy oddziaływania światła na psychikę człowieka ekonomiczne - polegające na wybraniu takiego wariantu oświetlenia, który spełniając powyższe zasady dałby najniższe koszty eksploatacji, przy jednoczesnym spełnieniu zasad fizjologicznych i estetycznych"},{"p":"Jakie korzyści wynikają z dobrego oświetlenia pomieszczeń i stanowisk pracy?","o":"Korzyści z dobrego oświetlenia to: uzyskanie wyższego poziomu produkcji pod względem jakościowym i ilościowym zapobieganie nadmiernemu wytężaniu wzroku, a tym samym przedwczesnym jego zmęczeniu zmniejszenie ryzyka wypadku, ułatwienie właściwego rozróżniania barw umożliwienie łatwego rozróżniania szczegółów"},{"p":"Jakie są rodzaje oświetlenia podstawowego?","o":"Rozróżniamy 3 rodzaje oświetlenia podstawowego pomieszczeń: oświetlenie ogólne oświetlenie miejscowe oświetlenie złożone"},{"p":"Co, z higienicznego punktu widzenia, ma wpływ na wygodę widzenia na stanowisku pracy?","o":"Na wygodę widzenia na stanowisku pracy ma wpływ: natężenie oświetlenia w lx równomierność oświetlenia barwa światła i rozróżnianie barw (wskaźnik oddawania barw) rozkład luminancji w całym pomieszczeniu ograniczenie olśnienia"},{"p":"Jakie negatywne skutki powoduje ma niewłaściwe oświetlenie?","o":"Niewłaściwe oświetlenie powoduje:    zmęczenie wzroku możliwość popełniania błędów przy pracy możliwość powstawania wypadków"},{"p":"Jaki jest, wymagany minimalny poziom natężenia oświetlenia dla stanowisk pracy w biurach?","o":"Minimalny poziom natężenia oświetlenia dla stanowisk pracy wnosi: 500 lx – pisanie ręczne, obsługiwanie klawiatury, czytanie, przetwarzania danych, stanowiska komputerowe, pokoje spotkań, sale konferencyjne; 300 lx – recepcje, segregowanie dokumentów, kopiowanie; 200 lx – archiwa, magazyny."},{"p":"Wymień przynajmniej 5 chorób zawodowych","o":"Astma oskrzelowa pylica płuc beryloza byssinoza przewlekłe choroby narządu głosu"}]},{"n":"Nowa kategoria"}]}')
 var arr = ["Co tam?", "Chciałbym umrzeć z miłości", "No fajna ta gra na BHP"]
@@ -18,6 +20,7 @@ function getCategories(){
 }
 
 function generateCards(categories){
+  cards = [];
   s = 0
   s1 = 0
   for (var i = 0; i < 3; i++) {
@@ -42,39 +45,42 @@ function generateCards(categories){
     newDiv.style.transitionDelay = s +"s"
     newDiv.addEventListener('click', showQuestion)
     document.body.appendChild(newDiv)
+    cards.push(newDiv)
     s += 0.25
     s1 += 0.5
   }
   setTimeout(function(){animateCards()}, 2)
 }
 function animateCards(){
-  const cards = document.getElementsByClassName('card')
   cards[0].classList.add('top')
   cards[1].classList.add('zero')
   cards[2].classList.add('bottom')
   setTimeout(function(){animateText(cards)}, 1000)
 }
 
-function animateText(cards){
+function animateText(){
   for (var i = 0; i < cards.length; i++) {
     cards[i].childNodes[0].classList.add('show')
   }
 }
 
 function showQuestion(event){
-  const cards = document.getElementsByClassName('card')
+  var cards2 = cards;
+  var pickedCard = event.target;
+  while(!pickedCard.classList.contains('card')){
+    pickedCard = pickedCard.parentNode
+  }
 
-  var pickedCard = event.target.parentNode.parentNode.parentNode;
   var s = 0
-  for (var i = 0; i < cards.length; i++) {
-    if(cards[i] != pickedCard){
-      cards[i].style.transitionDelay = s + "s";
-      cards[i].classList.add('hide')
+  for (var i = 0; i < cards2.length; i++) {
+    if(cards2[i] != pickedCard){
+      cards2[i].style.transitionDelay = s + "s";
+      cards2[i].classList.add('hide')
     }
     else {
-      cards[i].style.transitionDelay = 0 + "s";
-      cards[i].classList.remove('top', 'bottom', 'zero')
-      var cat = cards[i].childNodes[0].childNodes[0].childNodes[0].innerHTML
+      cards2[i].style.transitionDelay = 0 + "s";
+      cards2[i].classList.remove('top', 'bottom', 'zero')
+      var cat = cards2[i].childNodes[0].childNodes[0].childNodes[0].innerHTML
       var ques;
       for (var j = 0; j < jsonx.c.length; j++) {
         if(jsonx.c[j].n == cat){
@@ -86,14 +92,15 @@ function showQuestion(event){
       var question = ques[r].p
       var ans = ques[r].o
       ques.splice(ques.indexOf(ques[r]), 1);
-      cards[i].childNodes[0].childNodes[1].childNodes[0].innerHTML += question;
+      cards2[i].childNodes[0].childNodes[1].childNodes[0].innerHTML += question;
       var button = document.createElement('button')
       button.innerHTML = "Zobacz odpowiedź"
-      cards[i].removeEventListener('click', showQuestion)
-      cards[i].addEventListener('click', showAns)
-      cards[i].childNodes[0].childNodes[1].childNodes[0].appendChild(button)
-      cards[i].childNodes[0].childNodes[0].childNodes[0].innerHTML = ans;
-      cards[i].classList.add('pick');
+      cards2[i].removeEventListener('click', showQuestion)
+      cards2[i].addEventListener('click', showAns)
+      cards2[i].childNodes[0].childNodes[1].childNodes[0].appendChild(button)
+      cards2[i].childNodes[0].childNodes[0].childNodes[0].innerHTML = ans;
+      cards2[i].classList.add('pick');
+      cards = cards2[i]
     }
     s += 0.1;
   }
@@ -106,15 +113,20 @@ function showQuestion(event){
 
 }
 
-function showAns(event){
-  event.target.parentNode.parentNode.style.transform = 'rotateX(0)'
-  event.target.parentNode.parentNode.parentNode.removeEventListener('click', showAns)
-  event.target.parentNode.parentNode.parentNode.addEventListener('click', restart)
+function showAns(){
+  console.log(cards);
+  cards.childNodes[0].style.transform = 'rotateX(0)'
+  cards.childNodes[0].childNodes[0].removeEventListener('click', showAns)
+  cards.childNodes[0].childNodes[0].addEventListener('click', restart)
 }
 
-function restart(event){
-  event.target.parentNode.parentNode.parentNode.classList.add('hide')
-  setTimeout(function(){event.target.parentNode.parentNode.parentNode.remove()}, 2000)
+function restart(){
+  cards.classList.add('hide')
+  setTimeout(function(){cards.remove()}, 100)
+  generate();
+}
+
+function generate(){
   startScreen = document.createElement('div')
   startScreen.classList.add('startScreen')
   button = document.createElement('button')
