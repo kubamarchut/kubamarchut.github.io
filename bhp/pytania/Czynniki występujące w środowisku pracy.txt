@@ -1,7 +1,7 @@
 Jak klasyfikujemy czynniki zagrożeń występujących w środowisku pracy?
-Czynniki szkodliwe dla zdrowia, czynniki niebezpieczne, czynniki uciążliwe.
+<ul><li>czynniki szkodliwe dla zdrowia</li><li>czynniki niebezpieczne</li><li>czynniki uciążliwe</li></ul>
 Które czynniki wyróżnia się wśród czynników szkodliwych dla zdrowia?
-Czynniki biologiczne, czynniki fizyczne, czynniki chemiczne, czyniki psychofizyczne.
+<ul><li>czynniki biologiczne</li><li>czynniki fizyczne</li><li>czynniki chemiczne</li><li>czyniki psychofizyczne</li></ul>.
 Czym jest czynnik uciążliwy?
 Czynnik uciążliwy to czynnik, którego oddziaływanie na pracownika może być przyczyną złego samopoczucia lub nadmiernego zmęczenia, które nie prowadzi jednak do trwałego pogorszenia stanu zdrowia.
 Do jakich głównych kategorii można zaliczyć czynniki o charakterze uciążliwym?

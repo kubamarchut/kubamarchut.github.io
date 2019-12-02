@@ -5,10 +5,10 @@ Za chorobę zawodową uważa się chorobę, jeżeli w wyniku oceny warunków pra
 Komu należy zgłosić podejrzenie o chorobę zawodową?
 Każde podejrzenie o chorobę zawodową musi być zgłoszone na piśmie do właściwego inspektora sanitarnego oraz właściwego okręgowego inspektora pracy.
 Kto upoważniony jest do rozpoznania choroby zawodowej?
-Upoważnione do rozpoznania choroby zawodowej są następujące jednostki:<br><br>poradnia chorób zawodowych<br><br>klinika chorób zawodowych wchodzące w skład odpowiednich zakładów służby zdrowia, akademii medycznych, instytutów naukowo-badawczych.
+Upoważnione do rozpoznania choroby zawodowej są następujące jednostki:<ul><li>poradnia chorób zawodowych</li><li>kliniki chorób zawodowych wchodzące w skład odpowiednich zakładów służby zdrowia, akademii medycznych, instytutów naukowo-badawczych.</li></ul>
 Komu przysługują świadczenia z tytułu wypadku przy pracy i choroby zawodowej?
 Świadczenia  z tytułu wypadku i chorób zawodowych przysługują pracownikom, którzy doznali uszczerbku na zdrowiu oraz członkom rodzin pracowników zmarłych w skutek wypadku lub choroby.
 Jakie znasz świadczenia z tytułu wypadku przy pracy i choroby zawodowej?
-zasiłek chorobowy<br><br>świadczenie rehabilitacyjne<br><br>zasiłek wyrównawczy<br><br>jednorazowe odszkodowanie<br><br>dodatek pielęgnacyjny<br><br>renta szkoleniowa (jeśli musi się przekwalifikować)<br><br>renta z tytułu niezdolności do pracy<br><br>renta rodzinna
+zasiłek chorobowy<br>świadczenie rehabilitacyjne<br>zasiłek wyrównawczy<br>jednorazowe odszkodowanie<br>dodatek pielęgnacyjny<br>renta szkoleniowa (jeśli musi się przekwalifikować)<br>renta z tytułu niezdolności do pracy<br><br>renta rodzinna
 Wymień przynajmniej 5 chorób zawodowych
-Astma oskrzelowa<br><br>pylica płuc<br><br>beryloza<br><br>byssinoza<br><br>przewlekłe choroby narządu głosu
+<ul><li>Astma oskrzelowa</li><li>pylica płuc</li><li>beryloza</li><li>byssinoza</li><li>przewlekłe choroby narządu głosu</li></ul>

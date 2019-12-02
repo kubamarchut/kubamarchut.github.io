@@ -4,11 +4,11 @@
     "p": [
       {
         "p": "Jak klasyfikujemy czynniki zagrożeń występujących w środowisku pracy?",
-        "o": "Czynniki szkodliwe dla zdrowia, czynniki niebezpieczne, czynniki uciążliwe."
+        "o": "<ul><li>czynniki szkodliwe dla zdrowia</li><li>czynniki niebezpieczne</li><li>czynniki uciążliwe</li></ul>"
       },
       {
         "p": "Które czynniki wyróżnia się wśród czynników szkodliwych dla zdrowia?",
-        "o": "Czynniki biologiczne, czynniki fizyczne, czynniki chemiczne, czyniki psychofizyczne."
+        "o": "<ul><li>czynniki biologiczne</li><li>czynniki fizyczne</li><li>czynniki chemiczne</li><li>czyniki psychofizyczne</li></ul>."
       },
       {
         "p": "Czym jest czynnik uciążliwy?",
@@ -62,7 +62,7 @@
       },
       {
         "p": "Wymień przynajmniej 6 dziedzin nauk składających się na wiedzę ergonomiczną",
-        "o": "Dobre to: Fizjologia pracy, Psychologia, Antropometria, Biomechanika, Higiena pracy, Socjologia, Ochrona środowiska, Medycyna pracy, Estetyka, Bionika, Mechanika"
+        "o": "Na przykład: Fizjologia pracy, Psychologia, Antropometria, Biomechanika, Higiena pracy, Socjologia, Ochrona środowiska, Medycyna pracy, Estetyka, Bionika, Mechanika"
       },
       {
         "p": "Jeden z typów ergonomii zajmuje się opracowywaniem rozwiązań technicznych we wczesnej fazie opracowywania, jak nazywamy ten typ ergonomii?",
@@ -74,7 +74,7 @@
       },
       {
         "p": "Wymień 3 cechy fizyczne człowieka należy uwzględnić w kształtowaniu stanowiska pracy?",
-        "o": "Dobre to: Wymiary antropometryczne ciała ludzkiego, zakresy kątowe ruchu w stawach, możliwości siłowe i sprawnościowe układu ruchu związane z: siłami rozwijanymi, pozycją ciała, czasem pracy lub częstością powtórzeń czynności roboczych"
+        "o": "Na przykład: Wymiary antropometryczne ciała ludzkiego, zakresy kątowe ruchu w stawach, możliwości siłowe i sprawnościowe układu ruchu związane z: siłami rozwijanymi, pozycją ciała, czasem pracy lub częstością powtórzeń czynności roboczych"
       }
     ]
   },
@@ -191,19 +191,19 @@
     "p": [
       {
         "p": "Jakie są 3 podstawowe zasady dobrego oświetlenia?",
-        "o": "fizjologiczne - wynikające z analizy parametrów oświetlenia wpływających na jakość widzenia<br><br>estetyczne - wynikające z analizy oddziaływania światła na psychikę człowieka<br><br>ekonomiczne - polegające na wybraniu takiego wariantu oświetlenia, który spełniając powyższe zasady dałby najniższe koszty eksploatacji, przy jednoczesnym spełnieniu zasad fizjologicznych i estetycznych"
+        "o": "<ul><li><b>fizjologiczne</b> - wynikające z analizy parametrów oświetlenia wpływających na jakość widzenia</li><li><b>estetyczne</b> - wynikające z analizy oddziaływania światła na psychikę człowieka</li><li><b>ekonomiczne</b> - polegające na wybraniu takiego wariantu oświetlenia, który spełniając powyższe zasady dałby najniższe koszty eksploatacji, przy jednoczesnym spełnieniu zasad fizjologicznych i estetycznych</li></ul>"
       },
       {
         "p": "Jakie korzyści wynikają z dobrego oświetlenia pomieszczeń i stanowisk pracy?",
-        "o": "Korzyści z dobrego oświetlenia to:<br><br>uzyskanie wyższego poziomu produkcji pod względem jakościowym i ilościowym<br><br>zapobieganie nadmiernemu wytężaniu wzroku, a tym samym przedwczesnym jego zmęczeniu<br><br>zmniejszenie ryzyka wypadku,<br>ułatwienie właściwego rozróżniania barw<br><br>umożliwienie łatwego rozróżniania szczegółów"
+        "o": "Korzyści z dobrego oświetlenia to:<ul><li>uzyskanie wyższego poziomu produkcji pod względem jakościowym i ilościowym</li><li>zapobieganie nadmiernemu wytężaniu wzroku, a tym samym przedwczesnym jego zmęczeniu</li><li>zmniejszenie ryzyka wypadku</li><li>ułatwienie właściwego rozróżniania barw</li><li>umożliwienie łatwego rozróżniania szczegółów</li></ul>"
       },
       {
         "p": "Jakie są rodzaje oświetlenia podstawowego?",
-        "o": "Rozróżniamy 3 rodzaje oświetlenia podstawowego pomieszczeń:<br><br>oświetlenie ogólne<br><br>oświetlenie miejscowe<br><br>oświetlenie złożone"
+        "o": "Rozróżniamy 3 rodzaje oświetlenia podstawowego pomieszczeń:<ul><li>oświetlenie ogólne</li><li>oświetlenie miejscowe</li><li>oświetlenie złożone</li></ul>"
       },
       {
         "p": "Co, z higienicznego punktu widzenia, ma wpływ na wygodę widzenia na stanowisku pracy?",
-        "o": "Na wygodę widzenia na stanowisku pracy ma wpływ:<br><br>natężenie oświetlenia w lx<br><br>równomierność oświetlenia<br><br>barwa światła i rozróżnianie barw (wskaźnik oddawania barw)<br><br>rozkład luminancji w całym pomieszczeniu<br><br>ograniczenie olśnienia"
+        "o": "Na wygodę widzenia na stanowisku pracy ma wpływ:<ul><li>natężenie oświetlenia w lx</li><li>równomierność oświetlenia</li><li>barwa światła i rozróżnianie barw (wskaźnik oddawania barw)</li><li>rozkład luminancji w całym pomieszczeniu</li><li>ograniczenie olśnienia</li></ul>"
       },
       {
         "p": "Jakie negatywne skutki powoduje ma niewłaściwe oświetlenie?",
@@ -211,11 +211,11 @@
       },
       {
         "p": "Jaki jest, wymagany minimalny poziom natężenia oświetlenia dla stanowisk pracy w biurach?",
-        "o": "Minimalny poziom natężenia oświetlenia dla stanowisk pracy wnosi:<br><br>500 lx – pisanie ręczne, obsługiwanie klawiatury, czytanie, przetwarzania danych, stanowiska komputerowe, pokoje spotkań, sale konferencyjne;<br><br>300 lx – recepcje, segregowanie dokumentów, kopiowanie;<br><br>200 lx – archiwa, magazyny."
+        "o": "Minimalny poziom natężenia oświetlenia dla stanowisk pracy wnosi:<ul><li><b>500 lx</b> – pisanie ręczne, obsługiwanie klawiatury, czytanie, przetwarzania danych, stanowiska komputerowe, pokoje spotkań, sale konferencyjne;</li><li><b>300 lx</b> – recepcje, segregowanie dokumentów, kopiowanie;</li><li><b>200 lx</b> – archiwa, magazyny.</li></ul>"
       },
       {
         "p": "Wymień przynajmniej 5 chorób zawodowych",
-        "o": "Astma oskrzelowa<br><br>pylica płuc<br><br>beryloza<br><br>byssinoza<br><br>przewlekłe choroby narządu głosu"
+        "o": "<ul><li>Astma oskrzelowa</li><li>pylica płuc</li><li>beryloza</li><li>byssinoza</li><li>przewlekłe choroby narządu głosu</li></ul>"
       }
     ]
   },
@@ -236,7 +236,7 @@
       },
       {
         "p": "Kto upoważniony jest do rozpoznania choroby zawodowej?",
-        "o": "Upoważnione do rozpoznania choroby zawodowej są następujące jednostki:<br><br>poradnia chorób zawodowych<br><br>klinika chorób zawodowych wchodzące w skład odpowiednich zakładów służby zdrowia, akademii medycznych, instytutów naukowo-badawczych."
+        "o": "Upoważnione do rozpoznania choroby zawodowej są następujące jednostki:<ul><li>poradnia chorób zawodowych</li><li>kliniki chorób zawodowych wchodzące w skład odpowiednich zakładów służby zdrowia, akademii medycznych, instytutów naukowo-badawczych.</li></ul>"
       },
       {
         "p": "Komu przysługują świadczenia z tytułu wypadku przy pracy i choroby zawodowej?",
@@ -244,11 +244,11 @@
       },
       {
         "p": "Jakie znasz świadczenia z tytułu wypadku przy pracy i choroby zawodowej?",
-        "o": "zasiłek chorobowy<br><br>świadczenie rehabilitacyjne<br><br>zasiłek wyrównawczy<br><br>jednorazowe odszkodowanie<br><br>dodatek pielęgnacyjny<br><br>renta szkoleniowa (jeśli musi się przekwalifikować)<br><br>renta z tytułu niezdolności do pracy<br><br>renta rodzinna"
+        "o": "zasiłek chorobowy<br>świadczenie rehabilitacyjne<br>zasiłek wyrównawczy<br>jednorazowe odszkodowanie<br>dodatek pielęgnacyjny<br>renta szkoleniowa (jeśli musi się przekwalifikować)<br>renta z tytułu niezdolności do pracy<br><br>renta rodzinna"
       },
       {
         "p": "Wymień przynajmniej 5 chorób zawodowych",
-        "o": "Astma oskrzelowa<br><br>pylica płuc<br><br>beryloza<br><br>byssinoza<br><br>przewlekłe choroby narządu głosu"
+        "o": "<ul><li>Astma oskrzelowa</li><li>pylica płuc</li><li>beryloza</li><li>byssinoza</li><li>przewlekłe choroby narządu głosu</li></ul>"
       }
     ]
   },
@@ -257,11 +257,11 @@
     "p": [
       {
         "p": "Czy pracownik ma prawo do powstrzymania się od wykonywania pracy w szczególnych sytuacjach?",
-        "o": "Tak, może w przypadku gdy warunki pracy nie odpowiadają przepisom bezpieczeństwa i higieny pracy i stwarzają bezpośrednie zagrożenie dla zdrowia lub życia pracownika."
+        "o": "<b>Tak</b>, może w przypadku gdy warunki pracy nie odpowiadają przepisom bezpieczeństwa i higieny pracy i stwarzają bezpośrednie zagrożenie dla zdrowia lub życia pracownika."
       },
       {
         "p": "Czy pracownik ma prawo do oddalenia się z miejsca pracy?",
-        "o": "Tak, w razie gdy powstrzymanie się od wykonywania pracy nie usuwa zagrożenia."
+        "o": "<b>Tak</b>, w razie gdy powstrzymanie się od wykonywania pracy nie usuwa zagrożenia."
       },
       {
         "p": "Co powinien zrobić pracownik, jeśli zauważy wypadek w zakładzie pracy?",
@@ -298,11 +298,11 @@
       },
       {
         "p": "Jakimi 3 karami pracodawca może ukarać pracownika? ",
-        "o": "Pracodawca może ukarać pracownika: karą upomnienia, nagany, pieniężną."
+        "o": "Pracodawca może ukarać pracownika:<ul><li>karą upomnienia</li><li>nagany</li><li>pieniężną</li></ul>"
       },
       {
         "p": "Kiedy pracodawca jest obowiązany powołać służbę BHP?",
-        "o": "Pracodawca musi powołać służbę BHP kiedy zatrudnia więcej niż 100 pracowników."
+        "o": "Pracodawca musi powołać służbę BHP kiedy zatrudnia więcej niż <b>100 pracowników</b>."
       },
       {
         "p": "Jaki organ musi powołać pracodawca zatrudniający powyżej 250 pracowników?",
@@ -340,7 +340,7 @@
     "p": [
       {
         "p": "Jakie są biologiczne skutki pracy w gorącym mikroklimacie?",
-        "o": "Udar cieplny, wyczerpanie cieplne i bolesne skurcze mięśni."
+        "o": "<ul><li>udar cieplny</li><li>wyczerpanie cieplne</li><li>bolesne skurcze mięśni</li></ul>"
       },
       {
         "p": "Do jakiej grupy zagrożenia szkodliwych czynników biologicznych zaliczamy dżumę?",
@@ -378,7 +378,7 @@
     "p": [
       {
         "p": "Jakie części ciała powinny chronić środki ochrony indywidualnej?",
-        "o": "środki ochrony kończyn (ochraniacze stóp, obuwie ochronne, ochraniacze kolan, łokci, dłoni itd.), głowy (głównie hełmy), twarzy i oczu, m.in. okulary ochronne, słuchu (nauszniki, wkładki przeciwhałasowe itp.), układu oddechowego, izolujące cały organizm, (np. kombinezony gazoszczelne, środki chroniące przed upadkiem z wysokości)."
+        "o": "<ul><li>środki ochrony kończyn (ochraniacze stóp, obuwie ochronne, ochraniacze kolan, łokci, dłoni itd.)</li><li><b>głowy</b> (głównie hełmy), twarzy i oczu, m.in. okulary ochronne</li><li><b>słuchu</b> (nauszniki, wkładki przeciwhałasowe itp.)</li><li><b>układu oddechowego</b>, izolujące cały organizm, (np. kombinezony gazoszczelne, środki chroniące przed upadkiem z wysokości).</li></ul>"
       },
       {
         "p": "Kiedy powinny być stosowane środki ochrony indywidualnej?",
@@ -390,7 +390,7 @@
       },
       {
         "p": "Jak oznakowane są środki ochrony indywidualnej gdy spełniają wymagania?",
-        "o": "Potwierdzeniem tych wymagań jest oznakowanie środków ochrony indywidualnej znakiem CE."
+        "o": "Potwierdzeniem tych wymagań jest oznakowanie środków ochrony indywidualnej <b>znakiem CE</b>."
       },
       {
         "p": "Co grozi pracownikowi gdy ten nie dostarczy pracownikowi środków ochrony indywidualnej?",

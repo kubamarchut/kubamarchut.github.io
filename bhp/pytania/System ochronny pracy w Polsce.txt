@@ -3,8 +3,8 @@ Konstytucja RP, Kodeks pracy, inne ustawy dotyczące organów nadzoru państwowe
 Wymień 3 państwowe organy sprawujące nadzór nad warunkami pracy
 Państwowa Inspekcja Pracy, Państwowa Inspekcja Sanitarna, Urząd Dozoru Technicznego
 Jakimi 3 karami pracodawca może ukarać pracownika? 
-Pracodawca może ukarać pracownika: karą upomnienia, nagany, pieniężną.
+Pracodawca może ukarać pracownika:<ul><li>karą upomnienia</li><li>nagany</li><li>pieniężną</li></ul>
 Kiedy pracodawca jest obowiązany powołać służbę BHP?
-Pracodawca musi powołać służbę BHP kiedy zatrudnia więcej niż 100 pracowników.
+Pracodawca musi powołać służbę BHP kiedy zatrudnia więcej niż <b>100 pracowników</b>.
 Jaki organ musi powołać pracodawca zatrudniający powyżej 250 pracowników?
 Pracodawca musi powołać Komisję Bezpieczeństwa i Higieny Pracy

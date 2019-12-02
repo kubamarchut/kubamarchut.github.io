@@ -131,6 +131,7 @@ button{
   transform: translate(-50%, calc(-50% + 200px))
 }
 .card .card-inner .card-front > p{
+  color: #0038FF;
   width: 90%;
   opacity: 0;
   transition: opacity .5s ease-in;
@@ -177,6 +178,11 @@ button{
 }
 .card.pick .card-inner::after{
   opacity: 1;
+}
+p ul{
+  list-style-image: url(hard-hat-solid.png);
+  list-style-position: inside;
+  padding: 0;
 }
 @keyframes example {
   from {opacity: 0; transform: translate(-50%, -50%) scaleX(0.1) scaleY(.5) ;}

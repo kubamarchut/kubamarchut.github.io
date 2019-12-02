@@ -1,10 +1,10 @@
 Jakie części ciała powinny chronić środki ochrony indywidualnej?
-środki ochrony kończyn (ochraniacze stóp, obuwie ochronne, ochraniacze kolan, łokci, dłoni itd.), głowy (głównie hełmy), twarzy i oczu, m.in. okulary ochronne, słuchu (nauszniki, wkładki przeciwhałasowe itp.), układu oddechowego, izolujące cały organizm, (np. kombinezony gazoszczelne, środki chroniące przed upadkiem z wysokości).
+<ul><li>środki ochrony kończyn (ochraniacze stóp, obuwie ochronne, ochraniacze kolan, łokci, dłoni itd.)</li><li><b>głowy</b> (głównie hełmy), twarzy i oczu, m.in. okulary ochronne</li><li><b>słuchu</b> (nauszniki, wkładki przeciwhałasowe itp.)</li><li><b>układu oddechowego</b>, izolujące cały organizm, (np. kombinezony gazoszczelne, środki chroniące przed upadkiem z wysokości).</li></ul>
 Kiedy powinny być stosowane środki ochrony indywidualnej?
 Powinny byc stosowane gdy, nie można uniknąć zagrożeń lub wystarczająco ich ograniczyć za pomocą środków ochrony zbiorowej albo odpowiedniej organizacji pracy
 Jak powinny być zaprojektowane środki ochrony indywidualnej?
 Środki ochrony indywidualnej powinny być zaprojektowane i wykonane tak, aby możliwe było ich łatwe i prawidłowe założenie przez użytkownika oraz pozostawienie ich na właściwym miejscu przez przewidywany okres użytkowania, z uwzględnieniem panujących wokół warunków, wykonywanych ruchów i przyjmowania pozycji ciała.
 Jak oznakowane są środki ochrony indywidualnej gdy spełniają wymagania?
-Potwierdzeniem tych wymagań jest oznakowanie środków ochrony indywidualnej znakiem CE.
+Potwierdzeniem tych wymagań jest oznakowanie środków ochrony indywidualnej <b>znakiem CE</b>.
 Co grozi pracownikowi gdy ten nie dostarczy pracownikowi środków ochrony indywidualnej?
 Niedostarczenie pracownikowi środków ochrony indywidualnej, jak również dostarczenie środków ochrony indywidualnej niespełniających wymagań oceny zgodności jest wykroczeniem zagrożonym karą grzywny.

@@ -1,7 +1,7 @@
 Czy pracownik ma prawo do powstrzymania się od wykonywania pracy w szczególnych sytuacjach?
-Tak, może w przypadku gdy warunki pracy nie odpowiadają przepisom bezpieczeństwa i higieny pracy i stwarzają bezpośrednie zagrożenie dla zdrowia lub życia pracownika.
+<b>Tak</b>, może w przypadku gdy warunki pracy nie odpowiadają przepisom bezpieczeństwa i higieny pracy i stwarzają bezpośrednie zagrożenie dla zdrowia lub życia pracownika.
 Czy pracownik ma prawo do oddalenia się z miejsca pracy?
-Tak, w razie gdy powstrzymanie się od wykonywania pracy nie usuwa zagrożenia.
+<b>Tak</b>, w razie gdy powstrzymanie się od wykonywania pracy nie usuwa zagrożenia.
 Co powinien zrobić pracownik, jeśli zauważy wypadek w zakładzie pracy?
 Pracownik powinien niezwłocznie zawiadomić przełożonego o zauważonym w zakładzie pracy wypadku albo zagrożeniu życia lub zdrowia ludzkiego oraz ostrzec współpracowników, a także inne osoby znajdujące się w rejonie zagrożenia, o grożącym im niebezpieczeństwie.
 Czy pracownik musi znać przepisy i zasady BHP, czy wystarczy że są one dostępne w razie potrzeby?
