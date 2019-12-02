@@ -25,6 +25,35 @@
     ]
   },
   {
+    "n": "Drgania mechaniczne",
+    "p": [
+      {
+        "p": "Czym są drgania mechaniczne, inaczej zwane wibracjami?",
+        "o": "niskoczęstotliwościowe drgania akustyczne rozprzestrzeniające się w ośrodkach stałych i przekazywane do organizmu pracownika przez określoną część jego ciała będącą w bezpośrednim kontakcie z drgającym ośrodkiem."
+      },
+      {
+        "p": "Do której grupy zakwalifikujemy drgania przekazywane do organizmu człowieka przez jego nogi?",
+        "o": "Do grupy drgań ogólnych."
+      },
+      {
+        "p": "Czym charakteryzują się wibracje zaliczane do drgań miejscowych?",
+        "o": "Oddziałują one na organizm człowieka poprzez kończyny górne."
+      },
+      {
+        "p": "Jakie zmiany powodują drgania mechaniczne przenoszone do organizmu poprzez kończyny górne?",
+        "o": "Powodują one zmiany chorobowe w układach: krążenia krwi, nerwowym oraz kostno-stawowym."
+      },
+      {
+        "p": "Jaki środek należy stosować w celu ochrony przed drganiami działającymi na organizm przez kończyny górne?",
+        "o": "W celu ochrony należy stosować rękawice antywibracyjne."
+      },
+      {
+        "p": "Jakie są najczęstsze źródła drgań działających na organizm poprzez kończyny górne?",
+        "o": "Najpopularniejsze źródła to ręczne narzędzia uderzeniowe o napędzie pneumatycznym, hydraulicznym lub elektrycznym, ręczne narzędzia obrotowe o napędzie elektrycznym lub spalinowym i dźwignie sterujące maszyn i pojazdów obsługiwane rękami."
+      }
+    ]
+  },
+  {
     "n": "Ergonomia w kształtowanie warunków pracy",
     "p": [
       {
@@ -100,6 +129,31 @@
       {
         "p": "Jak trzeba postępować ze strefami, w których występuje nadmierny hałas?",
         "o": "Wyznaczyć je i odpowiednio oznakować, a także ograniczyć dostęp do nich."
+      }
+    ]
+  },
+  {
+    "n": "Higieniczne warunki pomieszczeń pracy",
+    "p": [
+      {
+        "p": "Jaką temperaturę powietrza powinny mieć zapewnione pomieszczenia biurowe?",
+        "o": "Temperatura powietrza powinna wahać się od 20 do 26°C w zależności od pory roku."
+      },
+      {
+        "p": "Jaka może być maksymalna odległość od miejsca pracy do ustępu (toalety) w budynku?",
+        "o": "Powinna wynosić maksymalnie 75 metrów i zaleca się, by toalety były zlokalizowane na każdej kondygnacji budynku."
+      },
+      {
+        "p": "Jaka powinna być minimalna wysokość pomieszczenia w miejscu pracy zlokalizowanym w budynku mieszkalnym?",
+        "o": "Minimalna wysokość powinna wynosić 2,5 metra."
+      },
+      {
+        "p": "Ile minimalnie powinno przypadać wolnej objętości powietrza oraz wolnej powierzchni podłogi na jednego pracownika?",
+        "o": "Minimalna ilość wolnej objętości powietrza wynosi 13 m3, a ilość wolnej powierzchni podłogi powinna wynosić co najmniej 2 m2."
+      },
+      {
+        "p": "Gdzie można znaleźć informacje na temat parametrów oświetlenia elektrycznego w miejscu pracy?",
+        "o": "W Polskich Normach."
       }
     ]
   },
@@ -253,6 +307,31 @@
       {
         "p": "Jaki organ musi powołać pracodawca zatrudniający powyżej 250 pracowników?",
         "o": "Pracodawca musi powołać Komisję Bezpieczeństwa i Higieny Pracy"
+      }
+    ]
+  },
+  {
+    "n": "Zagrożenia od urządzeń elektrycznych",
+    "p": [
+      {
+        "p": "Podaj metody uwalniania porażonego spod działania prądu elektrycznego",
+        "o": "Wyłączenie zasilania lub odciągnięcie"
+      },
+      {
+        "p": "Jakie czynności należy wykonać bezpośrednio po uwolnieniu porażonego spod działania prądu elektrycznego?",
+        "o": "Ocenić stan poszkodowanego i zdecydować o zakresie oraz sposobie udzielenia pomocy"
+      },
+      {
+        "p": "Jakie są zagrożenia od urządzeń elektrycznych?",
+        "o": "porażenia i oparzenia prądem elektrycznym, pożary, wybuchy oraz szkodliwe działania pola magnetycznego i elektrostatycznego"
+      },
+      {
+        "p": "Co to jest porażenie elektryczne?",
+        "o": "Jest to przepływ prądu elektrycznego przez ciało człowieka w chwili, gdy jednocześnie styka się on z dwoma punktami pozostającymi pod różnymi potencjałami elektrycznymi"
+      },
+      {
+        "p": "Co może być przyczyną porażenia i oparzenia prądem elektrycznym?",
+        "o": "<ul><li>wadliwa budowa urządzeń</li><li>łuk elektryczny</li><li>brak odpowiedniej wiedzy o zagrożeniach</li><li>nieprzestrzeganie przepisów bezpieczeństwa</li></ul>"
       }
     ]
   },

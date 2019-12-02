@@ -45,6 +45,9 @@ button{
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75)
 }
 .startScreen{
+  animation-name: example;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
   transition: opacity .5s ease-in-out;
   position: absolute;
   top: 50%; left: 50%;
@@ -67,7 +70,7 @@ button{
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform .75s ease-in-out, width .75s ease-in-out, height .75s ease-in-out, opacity .5s ease-in-out;
+  transition: transform .75s ease-in-out, width .75s ease-in-out, height .75s ease-in-out, opacity 1s ease-in-out;
   width: 700px;
   height: 150px;
 }
@@ -108,6 +111,13 @@ button{
 }
 
 .card-front {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .card-back {
@@ -122,10 +132,6 @@ button{
 }
 .card .card-inner .card-front > p{
   width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity .5s ease-in;
   margin: 0;
@@ -133,7 +139,11 @@ button{
   font-style: normal;
   font-weight: bold;
   font-size: 2em;
+  background: red;
   background: -webkit-linear-gradient(-45deg, #D90000 30%, #0038FF 70%);
+  background: -o-linear-gradient(-45deg, #D90000 30%, #0038FF 70%);
+  background: -moz-linear-gradient(-45deg, #D90000 30%, #0038FF 70%);
+  background: linear-gradient(-45deg, #D90000 30%, #0038FF 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -167,4 +177,13 @@ button{
 }
 .card.pick .card-inner::after{
   opacity: 1;
+}
+@keyframes example {
+  from {opacity: 0; transform: translate(-50%, -50%) scaleX(0.1) scaleY(.5) ;}
+  75%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90%{
+    transform: translate(-50%, -50%) scale(1);
+  }
 }

@@ -1,0 +1,10 @@
+Podaj metody uwalniania porażonego spod działania prądu elektrycznego
+Wyłączenie zasilania lub odciągnięcie
+Jakie czynności należy wykonać bezpośrednio po uwolnieniu porażonego spod działania prądu elektrycznego?
+Ocenić stan poszkodowanego i zdecydować o zakresie oraz sposobie udzielenia pomocy
+Jakie są zagrożenia od urządzeń elektrycznych?
+porażenia i oparzenia prądem elektrycznym, pożary, wybuchy oraz szkodliwe działania pola magnetycznego i elektrostatycznego
+Co to jest porażenie elektryczne?
+Jest to przepływ prądu elektrycznego przez ciało człowieka w chwili, gdy jednocześnie styka się on z dwoma punktami pozostającymi pod różnymi potencjałami elektrycznymi
+Co może być przyczyną porażenia i oparzenia prądem elektrycznym?
+<ul><li>wadliwa budowa urządzeń</li><li>łuk elektryczny</li><li>brak odpowiedniej wiedzy o zagrożeniach</li><li>nieprzestrzeganie przepisów bezpieczeństwa</li></ul>
