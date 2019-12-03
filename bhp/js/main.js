@@ -152,7 +152,7 @@ function generate(){
 function starter(){
   startScreen.classList.add('hide')
   while(document.body.getElementsByClassName('card')[0]){}
-  setTimeout(function(){startScreen.remove()}, 500)
+  setTimeout(function(){startScreen.remove()}, 1000)
   setTimeout(function(){generateCards(getCategories())}, 1000)
 }
 
