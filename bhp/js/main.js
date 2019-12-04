@@ -130,11 +130,7 @@ function showAns(){
 }
 
 function restart(event){ 
-  var card = event.target
-  while(!card.classList.contains('card')){
-    card = card.parentNode[0];
-  }
-  card.removeEventListener('click', restart)
+  cards.childNodes[0].childNodes[0].removeEventListener('click', restart)
   cards.classList.add('hide')
   setTimeout(function(){cards.remove()}, 750)
   generate();
