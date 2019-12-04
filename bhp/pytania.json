@@ -212,10 +212,6 @@
       {
         "p": "Jaki jest, wymagany minimalny poziom natężenia oświetlenia dla stanowisk pracy w biurach?",
         "o": "Minimalny poziom natężenia oświetlenia dla stanowisk pracy wnosi:<ul><li><b>500 lx</b> – pisanie ręczne, obsługiwanie klawiatury, czytanie, przetwarzania danych, stanowiska komputerowe, pokoje spotkań, sale konferencyjne;</li><li><b>300 lx</b> – recepcje, segregowanie dokumentów, kopiowanie;</li><li><b>200 lx</b> – archiwa, magazyny.</li></ul>"
-      },
-      {
-        "p": "Wymień przynajmniej 5 chorób zawodowych",
-        "o": "<ul><li>Astma oskrzelowa</li><li>pylica płuc</li><li>beryloza</li><li>byssinoza</li><li>przewlekłe choroby narządu głosu</li></ul>"
       }
     ]
   },
@@ -395,6 +391,10 @@
       {
         "p": "Co grozi pracownikowi gdy ten nie dostarczy pracownikowi środków ochrony indywidualnej?",
         "o": "Niedostarczenie pracownikowi środków ochrony indywidualnej, jak również dostarczenie środków ochrony indywidualnej niespełniających wymagań oceny zgodności jest wykroczeniem zagrożonym karą grzywny."
+      },
+      {
+        "p": "Wymień przynajmniej 5 chorób zawodowych",
+        "o": "<ul><li>Astma oskrzelowa</li><li>pylica płuc</li><li>beryloza</li><li>byssinoza</li><li>przewlekłe choroby narządu głosu</li></ul>"
       }
     ]
   }
