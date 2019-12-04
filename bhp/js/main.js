@@ -129,7 +129,8 @@ function showAns(){
   cards.childNodes[0].childNodes[0].addEventListener('click', restart)
 }
 
-function restart(){
+function restart(event){
+  event.target.removeEventListener('click', restart)
   cards.classList.add('hide')
   setTimeout(function(){cards.remove()}, 750)
   generate();
