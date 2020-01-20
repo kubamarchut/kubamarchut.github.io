@@ -45,7 +45,7 @@ a:active::after{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 5px;
+	padding-bottom: 2px;
 	border-bottom: 3px dashed #5FAD41;
 }
 .header{
@@ -77,7 +77,7 @@ a:active::after{
   background-color: #5FAD41;
 }
 .col > div .title{
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 
 }
 .col > div .article{
@@ -107,10 +107,19 @@ a:active::after{
 .item:last-child{
 	margin: 0;
 }
-.newsList{
+.list{
 	list-style-position: inside;
-	list-style-image: url(../img/icon.png);
 	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.newsList{
+	list-style-image: url(../img/icon.png);
+	margin: 15px 0 0;
+}
+.musicList{
+	list-style-image: url(../img/music_icon.png);
+	line-height: 24px;
 }
 .article > .col{
 	text-align: center;
@@ -189,7 +198,7 @@ a:active::after{
       height 0.25s ease-out 0.75s;
   }
 .gallerymin{
-	width: 80%;
+	width: 70%;
 }
 .des{
 	float: right;
