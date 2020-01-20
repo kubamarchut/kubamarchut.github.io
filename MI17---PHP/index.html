@@ -81,7 +81,7 @@
 				<p class="counter"></p>
 				<div class="wrapper">
 					<button class="galleryNav"><</button>
-					<div class="slide">
+					<div class="slide open">
 					  <img src="img/1/airport-2373727_1920.jpg" alt="obrazek1">
 					</div>
 					<div class="slide">
@@ -103,7 +103,7 @@
 				<p class="counter"></p>
 				<div class="wrapper">
 					<button class="galleryNav"><</button>
-					<div class="slide">
+					<div class="slide open">
 					  <img src="img/2/architecture-3659152_1920.jpg" alt="obrazek1">
 					</div>
 					<div class="slide">
@@ -125,36 +125,52 @@
 		</div>
 		<script>
 			var slideN = [0, 0]
-			var buttons = document.getElementsByClassName("galleryOpener");
-			const galleries = document.getElementsByClassName("galleryModal");
-			function open(event){
-				buttons = Array.prototype.slice.call(buttons);
-				var index = buttons.indexOf(event.target);
-				galleries[index].classList.add('show')
-				var slides = galleries[index].getElementsByClassName('slide');
-				var NavBtns = galleries[index].getElementsByClassName('galleryNav');
-				var closeBtn = galleries[index].getElementsByClassName('close')[0];
+			var openingBTNs = document.getElementsByClassName('galleryOpener');
+			openingBTNs = Array.prototype.slice.call(openingBTNs);
+			var galleries = document.getElementsByClassName('galleryModal');
+			galleries = Array.prototype.slice.call(galleries)
 
-				NavBtns[0].addEventListener('click', function(){slideN[index] = slideN[index] > 0 ? slideN[index] - 1 : slideN[index]; showSlide(index, slideN[index])})
-				NavBtns[1].addEventListener('click', function(){slideN[index] = slideN[index] < (slides.length - 1) ? slideN[index] + 1 : slideN[index]; showSlide(index, slideN[index])})
-				closeBtn.addEventListener('click', function(){galleries[index].classList.remove('show')})
-				showSlide(index, slideN[index])
+			function openGallery(event){
+				var index = openingBTNs.indexOf(event.target)
+				var slides = galleries[index].getElementsByClassName('slide')
+				var counter = galleries[index].getElementsByClassName('counter')[0];
+				counter.innerHTML = `${slideN[index] + 1} / ${slides.length}`
+				galleries[index].classList.add('show');
 			}
-			for(var i = 0; i < buttons.length; i++){
-				buttons[i].addEventListener('click', open)
+			function closeGallery(gallery){
+				var gallery = event.target.parentNode;
+				gallery.classList.remove('show');
 			}
-
-			function showSlide(gallery, n){
-				var slides = galleries[gallery].getElementsByClassName('slide');
-				var counter = galleries[gallery].getElementsByClassName('counter')[0];
-
-				counter.innerHTML = ` ${n+1}\\${slides.length}`
-				for(var i = 0; i < slides.length; i++){
-					if(slides[i].classList.contains('open') && i != n) slides[i].classList.remove('open')
-					else if(!slides[i].classList.contains('open') && i == n) slides[i].classList.add('open')
+			function generateButtons(){
+				for(var i = 0; i < openingBTNs.length; i++) {
+					openingBTNs[i].addEventListener('click', openGallery)
+					var navigation = galleries[i].getElementsByClassName('galleryNav');
+					for (var j = 0; j < navigation.length; j++) {
+						navigation[j].addEventListener('click', changeSlide)
+					}
+					var closeBTN = galleries[i].getElementsByClassName('close')[0];
+					closeBTN.addEventListener('click', closeGallery)
 				}
 			}
+			function changeSlide(event){
+				var gallery = event.target.parentNode.parentNode.parentNode;
+				var slides = gallery.getElementsByClassName('slide')
+				var counter = gallery.getElementsByClassName('counter')[0];
+				var navButtons = Array.prototype.slice.call(gallery.getElementsByClassName('galleryNav'))
 
+				var temp = navButtons.indexOf(event.target) == 0 ? -1 : 1;
+				var slideNr = slideN[galleries.indexOf(gallery)] + temp
+				if(slideNr > -1 && slideNr < slides.length){
+						counter.innerHTML = `${slideNr + 1} / ${slides.length}`
+						slideN[galleries.indexOf(gallery)] = slideNr;
+
+						for (var i = 0; i < slides.length; i++) {
+							if(slides[i].classList.contains('open') && i != slideNr) slides[i].classList.remove('open')
+							else if(i == slideNr) slides[i].classList.add('open')
+						}
+				}
+			}
+			generateButtons()
 		</script>
 	</body>
 </html>
