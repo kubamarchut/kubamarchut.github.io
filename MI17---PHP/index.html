@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang=pl>
+	<head>
+		<meta charset='utf-8'>
+		<title>Klub Programistów PHP</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<div class="header title">Klub Programistów PHP</div>
+		<div class="col">
+			<div class="aktu">
+				<div class="title">Aktualności</div>
+				<div class="article">
+					<img src="img/confetti-2571539_1920.jpg" alt="Konferencyjna PHPconf">
+					<div class='item'>
+						<span class='timeStemp'>15.01.2020</span>
+						<span class=des>
+							Konferencyjna PHPconf znów zaskakuje! poznacie jej najnowszą odsłonę.
+							<a href=#>Czytaj_dalej</a>
+						</span>
+					</div>
+					<div class='item'>
+						<span class='timeStemp'>10.01.2020</span>
+						<span class=des>
+							Ranking najciekawszych przypadków utraty danych w 2019 roku.
+							<a href=#>Czytaj_dalej</a>
+						</span>
+					</div>
+				</div>
+				<ul class="newsList">
+					<li>Już za 12 dni turniej programistów PHP. <a href=#>Czytaj_dalej</a></li>
+					<li>Nowa wersja frameworku Laravel. <a href=#>Sprawdź_co_się_zmieniło</a></li>
+				</ul>
+			</div>
+			<div class="pogo">
+				<div class="title">Pogoda</div>
+				<div class="article">
+					<div class="col weatherDes">
+						<img src="img/clouded.gif" alt="pochmurno">
+						<p class="temp">10°C</p>
+						<p class="day">Poniedziałek</p>
+						<p class="con">Pochmurno</p>
+						<a href=#>Więcej_informacji</a>
+					</div>
+					<div class="col weatherDes">
+						<img src="img/rain.gif" alt="deszcz">
+						<p class="temp">5°C</p>
+						<p class="day">Wtorek</p>
+						<p class="con">Deszczowo</p>
+						<a href=#>Więcej_informacji</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="sport">
+				<div class="title">Sport</div>
+
+				https://coolors.co/231f20-5fad41-ffe0b5-ede580-a4af69
+			</div>
+			<div class="muzyka">
+				<div class="title">Muzyka</div>
+			</div>
+			<div class="galeria">
+				<div class="title">Galeria</div>
+				<div class="article">
+					<button class="col galleryOpener">
+						<div class="title">Podróże</div>
+						<img class="gallerymin" src="img/traveller-1149973_1920.jpg" alt="podróże">
+					</button>
+					<button class="col galleryOpener">
+						<div class="title">Warszawa</div>
+						<img class="gallerymin" src="img/cialis-4077400_1920.jpg" alt="warszawa">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer">Wykonał Jakub Marchut</div>
+		<div class="galleryModal">
+			<div class="galleryContent">
+				<p class="counter"></p>
+				<div class="wrapper">
+					<button class="galleryNav"><</button>
+					<div class="slide">
+					  <img src="img/1/airport-2373727_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/1/amsterdam-4388160_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/1/cafe-3537801_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/1/maldives-1993704_1920.jpg" alt="obrazek1">
+					</div>
+					<button class="galleryNav">></button>
+				</div>
+			</div>
+			<button class="close">X</button>
+		</div>
+		<div class="galleryModal">
+			<div class="galleryContent">
+				<p class="counter"></p>
+				<div class="wrapper">
+					<button class="galleryNav"><</button>
+					<div class="slide">
+					  <img src="img/2/architecture-3659152_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/2/cialis-4077400_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/2/first-3570271_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/2/monument-92826_1920.jpg" alt="obrazek1">
+					</div>
+					<div class="slide">
+					  <img src="img/2/warsaw-3421912_1920.jpg" alt="obrazek1">
+					</div>
+					<button class="galleryNav">></button>
+				</div>
+			</div>
+			<button class="close">X</button>
+		</div>
+		<script>
+			var slideN = [0, 0]
+			var buttons = document.getElementsByClassName("galleryOpener");
+			const galleries = document.getElementsByClassName("galleryModal");
+			function open(event){
+				buttons = Array.prototype.slice.call(buttons);
+				var index = buttons.indexOf(event.target);
+				galleries[index].classList.add('show')
+				var slides = galleries[index].getElementsByClassName('slide');
+				var NavBtns = galleries[index].getElementsByClassName('galleryNav');
+				var closeBtn = galleries[index].getElementsByClassName('close')[0];
+
+				NavBtns[0].addEventListener('click', function(){slideN[index] = (slideN[index] - 1) > -1 ? slideN[index] - 1 : slideN[index]; showSlide(index, slideN[index])})
+				NavBtns[1].addEventListener('click', function(){slideN[index] = (slideN[index] + 1) < slides.length ? slideN[index] + 1 : slideN[index]; showSlide(index, slideN[index])})
+				closeBtn.addEventListener('click', function(){galleries[index].classList.remove('show')})
+				showSlide(index, slideN[index])
+			}
+			for(var i = 0; i < buttons.length; i++){
+				buttons[i].addEventListener('click', open)
+			}
+
+			function showSlide(gallery, n){
+				var slides = galleries[gallery].getElementsByClassName('slide');
+				var counter = galleries[gallery].getElementsByClassName('counter')[0];
+
+				counter.innerHTML = ` ${n+1}\\${slides.length}`
+				for(var i = 0; i < slides.length; i++){
+					if(slides[i].classList.contains('open') && i != n) slides[i].classList.remove('open')
+					else if(!slides[i].classList.contains('open') && i == n) slides[i].classList.add('open')
+				}
+			}
+
+		</script>
+	</body>
+</html>
