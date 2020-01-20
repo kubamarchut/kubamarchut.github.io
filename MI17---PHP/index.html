@@ -135,8 +135,8 @@
 				var NavBtns = galleries[index].getElementsByClassName('galleryNav');
 				var closeBtn = galleries[index].getElementsByClassName('close')[0];
 
-				NavBtns[0].addEventListener('click', function(){slideN[index] = (slideN[index] - 1) > -1 ? slideN[index] - 1 : slideN[index]; showSlide(index, slideN[index])})
-				NavBtns[1].addEventListener('click', function(){slideN[index] = (slideN[index] + 1) < slides.length ? slideN[index] + 1 : slideN[index]; showSlide(index, slideN[index])})
+				NavBtns[0].addEventListener('click', function(){slideN[index] = slideN[index] > 0 ? slideN[index] - 1 : slideN[index]; showSlide(index, slideN[index])})
+				NavBtns[1].addEventListener('click', function(){slideN[index] = slideN[index] < (slides.length - 1) ? slideN[index] + 1 : slideN[index]; showSlide(index, slideN[index])})
 				closeBtn.addEventListener('click', function(){galleries[index].classList.remove('show')})
 				showSlide(index, slideN[index])
 			}
