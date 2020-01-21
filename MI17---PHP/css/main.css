@@ -85,7 +85,7 @@ a:active::after{
 }
 .col > div .article{
 	flex-grow: 1;
-	max-height: calc(100% - 55px)
+	max-height: calc(100% - 60px)
 }
 .article > img{
 	width: 100%;
@@ -218,7 +218,7 @@ a:active::after{
 }
 .counter{
 	font-size: 36px;
-  font-family: 'VT323';
+  font-family: 'VT323', monospace;
   margin: 0 0 30px;
 }
 .close{
