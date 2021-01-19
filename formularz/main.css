@@ -10,6 +10,7 @@
     left: 50%;
     transform: translateY(-50px) translateX(-50%) scale(.5);
     z-index: 1;
+    display: block;
 }
 .info.vis{
     opacity: 1;
