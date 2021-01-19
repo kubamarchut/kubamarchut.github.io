@@ -166,6 +166,7 @@
             <li><a href="ptak/">Poruszający się obiekt</a></li>
             <li><a href="formularz/">Formularz ze zdjęciem</a></li>
             <li><a href="stoper/">Stoper</a></li>
+            <li><a href="franbud/">Franbud</a></li>
         </ul>
         <h3>Inne linki</h3>
         <ul>
@@ -177,10 +178,10 @@
     </div>
     <script>
       TweenMax.staggerFrom(".dot", 0.8, {opacity:0, delay: 0.5, ease: SlowMo.ease.config(0.1, 2, false)}, 0.01);
-      window.addEventListener("load", function(){
+      setTimeout(()=>{window.addEventListener("load", function(){
         overlay.style.opacity = 0;
         overlay.style.visibility = "hidden";
-      })
+      })}, 1000)
     </script>
 </body>
 </html>
