@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>3, 2, 1</title>
   </head>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono&display=swap');
-body{
+    *{
+      box-sizing: border-box;
+    }
+    html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}body{
   background: #000 url(./sky-828648_1920.jpg);
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   background-size: cover;
   background-position: center bottom;
-  height: 100vh;
-margin: 0;
+
+overflow: hidden;
 }
 section{
   text-align: center;
@@ -22,6 +33,7 @@ section{
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: auto;
   min-width: 300px;
   min-height: 100px;
   background: #000000aa;
