@@ -112,7 +112,7 @@ var x = setInterval(function() {
   + addZero(minutes) + ":" + addZero(seconds);
 
   
-  if(secounds % 15 == 0){
+  if(seconds % 15 == 0){
     updateScreen.innerHTML = updates[secounds%5];
   }
 }, 1000);
