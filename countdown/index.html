@@ -49,6 +49,7 @@ p.counter{
   letter-spacing: -2px;
   font-family: 'Roboto Mono', monospace;
   opacity: .9;
+  position: relative;
 }
 .clock:before{
   position: absolute;
@@ -68,7 +69,7 @@ p.counter{
   </style>
   <body>
     <section>
-  <h1>Time left to next Daber:</h1>
+  <h1>Time left to next Dąber:</h1>
   <p class="counter">T- <span class="clock" data-prev="00:00:00:00">00:00:00:00</span></p>
   <p class="up">Latest update: this is going to be extremly crucial mission</p>
 </section>
@@ -112,7 +113,7 @@ var x = setInterval(function() {
 
   
   if(seconds % 15 == 0){
-    updateScreen.innerHTML = updates[Math.floor(Math.random() * updates.length)];
+    updateScreen.innerHTML = "Latest update: " updates[Math.floor(Math.random() * updates.length)];
   }
 }, 1000);
 </script>
