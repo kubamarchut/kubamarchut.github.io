@@ -48,6 +48,7 @@ p.counter{
 .clock{
   letter-spacing: -2px;
   font-family: 'Roboto Mono', monospace;
+  opacity: .9;
 }
 .clock:before{
   position: absolute;
@@ -69,9 +70,12 @@ p.counter{
     <section>
   <h1>Time left to next Daber:</h1>
   <p class="counter">T- <span class="clock" data-prev="00:00:00:00">00:00:00:00</span></p>
-  <p>Latest update: this is going to be extremly crucial mission</p>
+  <p class="up">Latest update: this is going to be extremly crucial mission</p>
 </section>
 <script>
+  const updateScreen = document.querySelector("p.up")
+  const updates = ['Operating system starting', 'Unity HUB launching', 'Starting MS Teams processes', 'Opening latest project', 'Entering metting'];
+  const randupdates = [];
   function addZero(s){
   if(String(s).length<2){
     return "0"+s
@@ -103,6 +107,9 @@ var x = setInterval(function() {
   // If the count down is over, write some text
   if (distance < 0) {
     document.querySelector('.counter').innerHTML('T+ <span class="clock">00:00:00:00</span>')
+  }
+  if(secounds % 15 == 0){
+    updateScreen.innerHTML = updates[secounds%5];
   }
 }, 1000);
 </script>
