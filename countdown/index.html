@@ -48,22 +48,18 @@ p.counter{
 .clock{
   letter-spacing: -2px;
   font-family: 'Roboto Mono', monospace;
-  animation: blink 1s infinite;
 }
 .clock:before{
   position: absolute;
   content: attr(data-prev);
-  opacity: 0;
+  animation: blink 1s infinite;
 }
 @keyframes blink{
   0%{
-    opacity: .5;
-  }
-  50%{
     opacity: 1;
   }
   100%{
-    opacity: .5;
+    opacity: .25;
   }
 }
 
