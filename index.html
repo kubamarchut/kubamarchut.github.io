@@ -178,10 +178,15 @@
     </div>
     <script>
       TweenMax.staggerFrom(".dot", 0.8, {opacity:0, delay: 0.5, ease: SlowMo.ease.config(0.1, 2, false)}, 0.01);
-      setTimeout(()=>{window.addEventListener("load", function(){
-        overlay.style.opacity = 0;
-        overlay.style.visibility = "hidden";
-      })}, 1000)
+      let ready = false;
+      window.addEventListener("load", ()=> ready=true)
+      let test = setInterval(()=>{
+        if(ready){
+            overlay.style.opacity = 0;
+            overlay.style.visibility = "hidden";
+            clearInterval(test)
+        }
+      }, 1000)
     </script>
 </body>
 </html>
