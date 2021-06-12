@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Roboto');
+*{
+  box-sizing: border-box;
+}
+nav a:link{
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 3px #ffff0000 solid;
+  transition: all .3s ease-in-out;
+}
+nav a:visited{
+  color: #fff;
+}
+nav a:hover, li.active a{
+  border-bottom: 3px #ff0 solid;
+}
+a:link{
+  text-decoration: none;
+  color: #ffffaa;
+  transition: all .3s ease-in-out;
+}
+a:visited{
+  color: #ffffaa;
+}
+a:hover{
+  color: #ff0;
+}
+html{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+#container{
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100vh;
+}
+h1, h2, h3, nav{
+  font-family: 'Cinzel', serif;
+}
+h2{
+  font-size: 2em;
+  margin: .5em 0;
+}
+iframe{
+  border: none;
+}
+nav{
+  position: fixed;
+  width: calc(100% - 17px);
+  height: auto;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.85)), color-stop(100%, rgba(0,0,0,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+}
+nav.active{
+  background-color: rgba(0,0,0,0.25);
+}
+nav ul{
+  list-style-type: none;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+nav ul li{
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0 .75%;
+}
+.linklist{
+  list-style-image: url(../img/cursor-154478.png);
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 40px;
+}
+.linklist li{
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+.placeslist{
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 40px;
+}
+.placeslist li{
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+.side{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.side p{
+  font-size: 1.5em;
+}
+table{
+  background-color: #000000ee;
+  font-size: 1.15em;
+  margin: 7.5% auto;
+  border-collapse: collapse;
+}
+table, td{
+  border: 2px #ffffffaa solid;
+}
+td{
+  padding: 10px 20px;
+}
+section{
+  position: relative;
+  padding: 10px;
+  height: 100vh;
+  width: 100%;
+  padding-top:60px;
+  scroll-behavior: smooth;
+}
+#welcome, #dane{
+  position: relative;
+  background:  center 0% url(../img/manhattan-336708_1920.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#dane{
+  background-image: url(../img/architecture-1868135_1920.jpg);
+}
+#welcome h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  margin: 0;
+
+}
+section header h1{
+  font-size: 6em;
+}
+
+
+
+input, textarea    {
+    color: #fff;
+    background: #000;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border: none;
+}
+input[type="text"], input[type="email"], textarea   {
+    margin: .5em 0;
+    width: 95%;
+    font-size: 1em;
+    text-align: left;
+    border-bottom: 1px solid #c6c6c6;
+}
+input:focus, article input[type="text"]:hover, article input[type="email"]:hover, textarea:focus, textarea:hover   {
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+input[type="submit"]    {
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid #c6c6c6;
+    margin: 2.5% 0;
+}
+input[type="submit"]:hover    {
+    color: grey;
+}
+input[type="submit"]:focus    {
+    border-bottom: 1px solid #fff;
+}
+#wiecej{
+  height: calc(100vh - 40px);
+}
+footer{
+  height: 40px;
+}

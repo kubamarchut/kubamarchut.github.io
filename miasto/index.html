@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Nowy jork</title>
+</head>
+<body>
+
+  <div id="container">
+    <nav id="navbar">
+      <ul>
+        <li><a href="#welcome">Strona główna</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#film">Film</a></li>
+        <li><a href="#dane">Ciekawe dane</a></li>
+        <li><a href="#ciekawe">Ciekawe miejsca</a></li>
+        <li><a href="#formularz">Formularz</a></li>
+        <li><a href="#wiecej">Więcej informacji</a></li>
+      </ul>
+    </nav>
+  <section id="welcome">
+    <header>
+      <h1>Nowy Jork</h1>
+    </header>
+  </section>
+  <section id="galeria">
+    <header>
+      <h2>Galeria</h2>
+    </header>
+    <iframe src="iframe_h.html" width="800" height="450"></iframe>
+  </section>
+  <section id="film">
+    <header>
+      <h2>Flim</h2>
+    </header>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/HiZXABMNCUY?start=22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+  <section id="dane">
+    <header>
+      <h2>Ciekawe dane</h2>
+    </header>
+<table>
+  <tr>
+    <td>Liczba mostów w Nowym Jorku</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>Liczba mieszkańców nowego Jorku</td>
+    <td>8,622,698</td>
+  </tr>
+  <tr>
+    <td>Liczba form życia znalezionych w Nowojorskim Metrze</td>
+    <td>15,152</td>
+  </tr>
+  <tr>
+    <td>Koszt obsugi stanowisk z Hotdogami w Nowojorskim Central Parku</td>
+    <td>$300,000</td>
+  </tr>
+  <tr>
+    <td>Liczba języków, które znają mieszkańcy Nowego Jorku</td>
+    <td>ponad 800</td>
+  </tr>
+</table>
+  </section>
+  <section id="ciekawe">
+    <header>
+      <h2>Ciekawe miejsca</h2>
+    </header>
+    <div class="side"><img src="img/taxi-cab-381233_1920.jpg" alt="Zdjęcie tasówki" style="border-radius: 50%">
+    </div>
+    <div class="side">
+      <p>
+        Poniżej znajduje się lista niesamowityc miejsc, które z pewnością warto odwiedzić.
+      </p>
+      <ol class="placeslist" type=I>
+        <li>Metropolitan Museum of Art</li>
+        <li>Empire State building</li>
+        <li>Wall street</li>
+        <li>Grand Central Terminal</li>
+        <li>Central Park</li>
+        <li>Katedra Św. Patryka</li>
+      </ol>
+    </div>
+  </section>
+  <section id="formularz">
+    <header>
+        <h2>Formularz na temat Nowego Jorku</h2>
+    </header>
+    <div class="side" style="padding: 10px 0;">
+      <form style="text-align: left; padding-left: 5%">
+          Byłeś kiedyś w Nowym Jorku?<br>
+          <label><input type="radio" name="czy_byles" value="Tak"> Tak</label>
+          <label><input type="radio" name="czy_byles" value="Nie"> Nie</label><br>
+          Jak nazywany jest Nowy Jork<br>
+          <select name="guess">
+            <option value="" selected>Wybierz</option>
+            <option value="bigapple">big apple</option>
+            <option value="smallapple">small apple</option>
+            <option value="bigstrawberry">big strawberry</option>
+            <option value="smallraspberry">small raspberry</option>
+          </select><br>
+		  Które miejsca cię zainteresowały?<br>
+		  <input type="checkbox" name="miejsce1" value="museum"> Metropolitan Museum of Art<br>
+		  <input type="checkbox" name="miejsce2" value="empirestate"> Empire State building<br>
+		  <input type="checkbox" name="miejsce3" value="wallstreet" > Wall street<br> 
+		  <input type="checkbox" name="miejsce4" value="grandcentral" > Grand Central Terminal<br> 
+		  <input type="checkbox" name="miejsce5" value="centralpark" > Central Park<br> 
+		  <input type="checkbox" name="miejsce6" value="katedra" > Katedra Św. Patryka<br>
+		  <input type="text" name="name" placeholder="Wpisz swoje Imię">
+          <input type="email" name="email" placeholder="Wpisz swój adres e-mail">
+          <textarea name="sugestion" placeholder="Wpisz swoje sugestię"></textarea><br>
+          <input type="submit" value="Wyślij">
+      </form>
+    </div>
+    <div class="side">
+      <img src="img/george-washington-bridge-2098351_1920_c.jpg" alt="Most Georga Washingtona" style="border-radius: 50%">
+    </div>
+  </section>
+  <section id="wiecej">
+    <header>
+      <h2>Więcej informacji</h2>
+    </header>
+    <ul class="linklist">
+      <li><a href="https://www.ny.gov" target="_blank">ny.gov</a></li>
+      <li><a href="https://www.nyctourist.com" target="_blank">nyctourist.com</a></li>
+      <li><a href="https://www.broadway.com" target="_blank">broadway.com</a></li>
+      <li><a href="https://www.ny.com" target="_blank">ny.com</a></li>
+      <li><a href="https://www.nycgo.com" target="_blank">nycgo.com</a></li>
+      <li><a href="https://pl.wikipedia.org/wiki/Nowy_Jork" target="_blank">Wikipedia - Nowy Jork</a></li>
+    </ul>
+  </section>
+  <footer>Wykonał Jakub Marchut 2019</footer>
+  </div>
+  <script type="text/javascript">
+    var container = document.getElementById("container")
+    var windowHeight = parseInt(window.innerHeight);
+    function calculate(){
+      var y = container.scrollTop;
+      var navbar = document.getElementById('navbar');
+      var link = navbar.getElementsByTagName("li");
+      var x = y+(windowHeight/2);
+	  
+      for(var i = 0; x > windowHeight-1 ; i++){
+        var x = x-windowHeight;
+      }
+	  console.log(i);
+      for(var j= 0; j< link.length; j++){
+        link[j].classList.remove("active");
+      }
+      link[i].classList.add("active");
+      if(y==0){navbar.classList.remove("active")}
+      else navbar.classList.add("active");
+    };
+    calculate();
+    container.addEventListener('scroll', calculate);
+  </script>
+</body>
+</html>
