@@ -15,7 +15,7 @@
     <meta name="author" content="Jakub Marchut">
     <meta charset="utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <title>portfolio- Kuba Marchut</title>
+    <title>Zadania JS</title>
 </head>
 
 <body>
@@ -32,8 +32,9 @@
             box-sizing: border-box;
         }
         html{
-            min-height: 100vh;
+            height: 100vh;
         }
+
         body {
             background: url(blue-2375119_1920.jpg) no-repeat;
             background-size: cover;
@@ -46,36 +47,17 @@
             color: #000;
             transition: .2s color ease-in-out;
         }
-        .cards{
-          width: 100%;
-          height: 100%;
+        a:hover{
+            color: #888;
         }
-        .card{
-          position: relative;
-          background: #fff;
-          box-shadow: 0 0 10px 0px rgba(0, 0, 0, .7);
-          margin: 20px 0;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.05em;
+            margin-top: 0;
         }
-        .card img{
-          width: 100%;
-          height: 95%;
-        }
-        .card_title{
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width:100%;
-          height: 55px;
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          background: url('./wave.svg');
-          background-size: cover;
-          z-index: 2;
-        }
-        .card_title > h3{
-          font-weight: normal;
-          margin: 0 0 5px;
+        li{
+            margin: 2px 0;
         }
         #overlay{
           position: absolute;
@@ -97,63 +79,19 @@
         }
         .container {
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, .4);
-            background: #fafafa;
+            background: #fff;
+            width: 50%;
             min-width: 310px;
-            padding: 20px 20px 10px 20px;
-            margin: 40px auto;
-            width: calc(100% - 20px)
-        }
-        footer {
-            font-size: .8em;
-        }
-        @media (min-width: 48em){
-          .container{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            min-width: 600px;
-            width: 70%;
-            max-width: 1900px;
-          }
-          .cards{
-            padding: 0 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            grid-column-gap: 30px;
-          }
-          .card{
-            transform: translateY(-60px);
-            opacity: 0;
-            transition: .4s transform ease, .2s filter ease;
-          }
-          .card:nth-child(1){
-            animation: 1s slidedown 1s forwards;
-          }
-          .card:nth-child(2){
-            animation: 1s slidedown 1.3s forwards;
-          }
+            padding: 20px 20px 10px 20px;
 
-          .card:nth-child(3){
-            animation: 1s slidedown 1.6s forwards;
-          }
+        }
 
-          .card:nth-child(4){
-            animation: 1s slidedown 1.9s forwards;
-          }
-          .card:hover{
-            transform: scale(.95) !important;
-            filter: brightness(.8);
-          }
-          @keyframes slidedown {
-              0%{
-                transform: translateY(-60px);
-              }
-              100%{
-                transform: translateY(0);
-                opacity: 1;
-              }
-          }
+        footer {
+            font-size: .8em;
         }
     </style>
     <div id="overlay">
@@ -222,33 +160,20 @@
   </svg>
     </div>
     <div class="container">
-        <h1>Moje projekty</h1>
-        <div class="cards">
-            <div class="card">
-              <img src="./makelongurl_screen.png" alt="minature img of website">
-              <div class="card_title">
-                <h3>makelongurl.com</h3>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./franbud_screen.png" alt="minature img of website">
-              <div class="card_title">
-                <h3>Franbud</h3>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./php_screen.png" alt="minature img of website">
-              <div class="card_title">
-                <h3>php-forum</h3>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./webdesign-3411373_1920.jpg" alt="minature img of website">
-              <div class="card_title">
-                <h3>New York</h3>
-              </div>
-            </div>
-          </div>
+        <h1>Lista zadań</h1>
+        <ul>
+            <li><a href="zniewaga/">Generator zniewag</a></li>
+            <li><a href="ptak/">Poruszający się obiekt</a></li>
+            <li><a href="formularz/">Formularz ze zdjęciem</a></li>
+            <li><a href="stoper/">Stoper</a></li>
+            <li><a href="franbud/">Franbud</a></li>
+        </ul>
+        <h3>Inne linki</h3>
+        <ul>
+            <li><a href="fajne-narzedzia/">Narzędzia do tworzenia stron</a></li>
+            <li><a href="http://mwskm.cba.pl/">Strona z apkami napisanymi w JS-ie</a></li>
+            <li><a href="http://realbus.pl/mwskm/mb">Strona WM</a></li>
+        </ul>
         <footer>Wykonał Jakub Marchut</footer>
     </div>
     <script>
