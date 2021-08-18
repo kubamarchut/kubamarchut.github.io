@@ -168,6 +168,9 @@ li {
   color: #000;
   font-weight: 600;
 }
+.yellow{
+  background: #fdffbf; 
+}
 /*.description::before {
   content: "";
   float: left;

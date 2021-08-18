@@ -59,6 +59,11 @@ function displayDB(){
       let new_cell = document.createElement("td");
       let new_input = document.createElement("input");
       new_input.value = data;
+      new_input.addEventListener('input', (e)=>{
+        console.log("sth");
+        let target = e.target || e.srcElement;
+        target.classList.add('yellow');
+      })
       new_cell.appendChild(new_input);
       new_row.appendChild(new_cell);
     }
