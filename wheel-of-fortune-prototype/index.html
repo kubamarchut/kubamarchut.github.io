@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="side">
+      <h1>Managment</h1>
+      <h2>Promotions</h2>
+      <table>
+        <tr>
+          <th>ordinal number</th>
+          <th>promotion name</th>
+          <th>promotion code</th>
+          <th>chance in 100</th>
+          <th>times in wheel</th>
+        </tr>
+        <tr>
+          <td>Add new</td>
+          <td><input type="text" value=""></td>
+          <td><input type="text" value=""></td>
+          <td><input type="text" value=""></td>
+          <td><input type="text" value=""></td>
+        </tr>
+      </table>
+      <button class="table-btn new-array">Modify Array</button>
+      <button class="table-btn new-promotion">Add new item</button>
+      <h2>User restrictions</h2>
+      <p>
+        <label class="switch">
+          Alow user for multiple draws a day
+          <input type="checkbox" checked>
+          <span class="slider-green"></span>
+        </label>
+      </p>
+    </div>
+
+    <div class="side">
+      <h1>Spin the wheel!</h1>
+      <div id="wheel-box">
+        <div id="hand"></div>
+        <ul id="wheel">
+        </ul>
+      </div>
+      <button class="spin">Spin me!</button>
+    </div>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>
