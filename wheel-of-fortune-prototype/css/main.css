@@ -36,7 +36,7 @@ h2{
 .table-btn{
   background-color: #04AA6D;
   color: #fff;
-  margin: 25px 0 0 15px;
+  margin: 0 0 15px 15px;
   float: right;
 }
 .new-promotion{
@@ -48,6 +48,7 @@ h2{
 .side{
   padding: 30px;
   background: #fff;
+  position: relative;
 }
 .side:nth-child(2){
   display: flex;
@@ -64,7 +65,7 @@ table {
 
 table th {
   border: 2px solid #ddd;
-  padding: 8px;
+  padding: 4px;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -169,7 +170,7 @@ li {
   font-weight: 600;
 }
 .yellow{
-  background: #fdffbf; 
+  background: #fdffbf;
 }
 /*.description::before {
   content: "";
@@ -211,3 +212,27 @@ li {
   shape-margin: 7%;
 }
 */
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -30%) scale(.4);
+  z-index: 100;
+  padding: 10px 30px;
+  text-align: center;
+  box-shadow: 0 0 15px 3px #666;
+  opacity: 0;
+  transition: .1s opacity ease-in-out .05s, .2s transform cubic-bezier(0.25, 2.5, 1, 0.8) .05s;
+}
+.modal.open{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.modal h2, .modal h1{
+  margin: 0 0 .2em 0;
+  padding: 0;
+}
+.modal h2{
+  font-size: 1.5em;
+}

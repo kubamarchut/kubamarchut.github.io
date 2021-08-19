@@ -1,14 +1,25 @@
+let db_from_cookies = getCookie('db')
+
 let db = [
   ["15% na wszystkie produkty", "15wdolmaj", "20", "1"],
   ["5% na wszystkie produkty", "5wdolmaj", "50", "1"],
   ["2 skórzane paski w cenie 1", "2wcenie1paski", "15", "1"],
   ["wszystkie produkty firmy casio 30% taniej", "30casioczerwiec", "15", "1"]
 ]
+
+
+if(db_from_cookies){
+  console.log(db_from_cookies);
+  db = JSON.parse(db_from_cookies);
+}
+
 const COLORS = ["#287271","#e9c46a","#e76f51","#2a9d8f","#f4a261","#8ab17d","#babb74"];
 const NEW_PROMOTION_BTN = document.querySelector('button.new-promotion');
+const MODIFY_ARRAY_BTN = document.querySelector('button.new-array');
 const TABLE = document.querySelector('table');
 const START_BTN = document.querySelector("button.spin");
 const WHEEL = document.querySelector("ul#wheel");
+const MODAL = document.querySelector("div.modal");
 
 let options = 0;
 for(item of db){
@@ -17,6 +28,30 @@ for(item of db){
 let min_step = 360 / options;
 
 NEW_PROMOTION_BTN.addEventListener('click', addNewItem);
+MODIFY_ARRAY_BTN.addEventListener('click', resetDB);
+
+function resetDB(){
+  db = [];
+  let items_to_save = TABLE.querySelectorAll("tr:not(:first-child):not(:last-child)");
+  for(item of items_to_save){
+    let row = item.querySelectorAll('input');
+    let promotion = []
+    for(data of row){
+      if (data.value != "") promotion.push(data.value);
+    }
+    if(promotion.length > 0) db.push(promotion);
+  }
+  options = 0;
+  for(item of db){
+    options += parseInt(item[item.length - 1]);
+  }
+  min_step = 360 / options;
+  clearTable();
+  displayDB();
+  generate_wheel();
+  var json_db = JSON.stringify(db);
+  setCookie('db', json_db.replace(/%(?![0-9][0-9a-fA-F]+)/g, '%25'), 1);
+}
 
 function addNewItem(){
   let data = [];
@@ -26,6 +61,9 @@ function addNewItem(){
     data.push(input.value);
   }
   db.push(data);
+  var json_db = JSON.stringify(db);
+  console.log(json_db);
+  setCookie('db', json_db.replace(/%(?![0-9][0-9a-fA-F]+)/g, '%25'), 1);
 
   options = 0;
   for(item of db){
@@ -89,7 +127,7 @@ function generate_wheel(){
   clearWheel();
   console.log(options);
   console.log(db);
-  for(let i = 0; i < options; i++){
+  for(let i = 0; i < db.length; i++){
     console.log(i);
     let section = document.createElement('li');
     section.classList.add('section');
@@ -138,7 +176,82 @@ function spin(target_promotion){
   let duration = rotations / 180;
   WHEEL.style.transition = `${duration}s transform cubic-bezier(0.14, 0.61, 0.72, 1)`;
   WHEEL.style.transform = `rotate(-${(degree + rotations)}deg)`;
+
+  setTimeout(()=>{
+    MODAL.classList.toggle("open");
+    hideOnClickOutside(MODAL);
+    MODAL.querySelector("h1").innerHTML = db[target_promotion][0];
+    MODAL.querySelector("input").value = db[target_promotion][1];
+    fire_confetti();
+  }, duration * 1000 + 1000);
+
 }, 200);
 }
 
+let right_side = document.querySelector('div.side:last-child')
+
 //rand_spin();
+
+function fire_confetti(){
+  var end = Date.now() + (1 * 1000);
+
+  (function frame() {
+    confetti({
+      particleCount: 5,
+      angle: 60,
+      spread: 100,
+      origin: { x: 0.5, y: 0.95}
+    });
+    confetti({
+      particleCount: 5,
+      angle: 120,
+      spread: 100,
+      origin: { x: 1, y: 0.95}
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  }());
+}
+
+
+
+function hideOnClickOutside(element) {
+    const outsideClickListener = event => {
+        console.log(event.target);
+        if (!element.contains(event.target)) { // or use: event.target.closest(selector) === null
+          element.classList.remove('open');
+          removeClickListener()
+        }
+    }
+
+    const removeClickListener = () => {
+        document.removeEventListener('click', outsideClickListener)
+    }
+
+    document.addEventListener('click', outsideClickListener)
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return ;
+}

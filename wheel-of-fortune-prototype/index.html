@@ -14,7 +14,7 @@
           <th>ordinal number</th>
           <th>promotion name</th>
           <th>promotion code</th>
-          <th>chance in 100</th>
+          <th>likelihood</th>
           <th>times in wheel</th>
         </tr>
         <tr>
@@ -25,13 +25,14 @@
           <td><input type="text" value=""></td>
         </tr>
       </table>
+      <p><i>In order to delete promotion clear all cells of selected row and press "Modify Array" button</i></p>
       <button class="table-btn new-array">Modify Array</button>
       <button class="table-btn new-promotion">Add new item</button>
       <h2>User restrictions</h2>
       <p>
         <label class="switch">
           Alow user for multiple draws a day
-          <input type="checkbox" checked>
+          <input type="checkbox" checked disabled>
           <span class="slider-green"></span>
         </label>
       </p>
@@ -45,7 +46,17 @@
         </ul>
       </div>
       <button class="spin">Spin me!</button>
+
+      <div class="modal">
+        <img src="trophy.png" alt="wygrana!" width=300>
+        <h2>Hurra twoja wygrana to:</h2>
+        <h1></h1>
+        <p>Oto twój kod promocyjny</p>
+        <input type="text">
+      </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
