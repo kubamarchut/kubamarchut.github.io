@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  box-sizing: border-box;
+}
+html {
+  background: #1A1A1A;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  align-contents: center;
+  height: 100%;
+}
+body>div{
+  position: relative;
+}
+/* Styles for the tilt block */
+#tilt {
+  display: block;
+  height: 450px;
+  width: 400px;
+  background-color: none;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.3s;
+
+  /*
+    * Adding image to the background
+    * No relation to the hover effect.
+    */
+  background-image: url("./Hive Nectar.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+
+    transform-style: preserve-3d;
+}
+
+#tilt:hover {
+  cursor: pointer;
+
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+#tilt::after{
+  content: '';
+  position: absolute;
+  top: 51%;
+  left: 49%;
+  transform: translate3D(-50%, -50%, -10px) rotate(-8deg);
+  z-index: -99;
+  width: 68%;
+  height: 76%;
+  background: #fff;
+  filter: blur(50px);
+  border-radius: 80px;
+  transform-style: flat;
+  opacity: .1;
+  transition: .8s opacity ease;
+}
+#tilt:hover::after{
+  opacity: .8;
+}
+.info{
+  color: #fff;
+  font-family: 'Poppins';
+  position: absolute;
+  opacity: 1;
+  transition: .2s opacity ease, .4s transform ease;
+  height: 94px;
+  width: 274px;
+  background: transparent;
+  border-radius: 25px;
+  padding: 13px 20px;
+  z-index: 100;
+  font-size: .75rem;
+
+}
+.desc>h3{
+  margin: 4px 0;
+}
+.info:nth-of-type(2){
+  top: -15%;
+  left: calc(-15% - 274px);
+  transform: scale(.28, .85) translate(-10%,-10%);
+}
+.info:nth-of-type(3){
+  top: -15%;
+  right: calc(-15% - 274px);
+  transform: scale(.28, .85) translate(10%,-10%);
+}
+.info:nth-of-type(4){
+  bottom: -20%;
+  left: calc(-15% - 274px);
+  transform: scale(.28, .85) translate(-10%,10%);
+}
+.info:nth-of-type(5){
+  bottom: -20%;
+  right: calc(-15% - 274px);
+  transform: scale(.28, .85) translate(10%,10%);
+}
+.info.show{
+  opacity: 1;
+  transform: translate(0,0);
+  background: #262626;
+}
+.desc>img{
+  height: 24px;
+  width: 24px;
+
+}
+.icon{
+  background: #FDC025;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  transform-origin: center center;
+  transform: scale(3.7, 1.25) translateX(33%);
+  transition: .4s transform ease;
+  z-index: 10;
+  box-shadow: 0px 0px 45px #FDC0254D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desc{
+  opacity: 0;
+  transition: .2s all ease;
+  z-index: 2;
+}
+.desc > h3{
+  transition-delay: 0;
+}
+.info.show > .icon{
+  transform: scale(1, 1);
+}
+.info.show > .desc{
+  opacity: 1;
+  transform: translateX(0);
+}
