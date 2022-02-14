@@ -12,6 +12,20 @@ const width = el.clientWidth
   * On mousemove
   */
 el.addEventListener('mousemove', handleMove)
+info.forEach((item, i) => {
+  item.addEventListener('mouseenter', ()=>{
+    console.log(7.5 * Math.pow((-1),i), -7.5 * Math.pow((-1), Math.round(0.5*(i-0.1))));
+    const string = 'perspective(500px) scale(1.1) rotateX(' + 7.5 * Math.pow((-1), Math.round(0.5*(i-0.1))) + 'deg) rotateY(' + -7.5 * Math.pow((-1),i) + 'deg)'
+    el.style.transform = string
+  })
+});
+info.forEach((item, i) => {
+  item.addEventListener('mouseleave', ()=>{
+    const string = 'perspective(500px) scale(1) rotateX(0deg) rotateY(0deg)'
+    el.style.transform = string
+  })
+});
+
 
 /* Define function a */
 function handleMove(e) {

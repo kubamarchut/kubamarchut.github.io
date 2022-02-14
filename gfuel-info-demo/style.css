@@ -49,8 +49,8 @@ body>div{
   width: 68%;
   height: 76%;
   background: #fff;
-  filter: blur(50px);
-  border-radius: 80px;
+  filter: blur(40px);
+  border-radius: 40px;
   transform-style: flat;
   opacity: .1;
   transition: .8s opacity ease;
@@ -71,32 +71,32 @@ body>div{
   padding: 13px 20px;
   z-index: 100;
   font-size: .75rem;
-
+  cursor: default;
 }
 .desc>h3{
   margin: 4px 0;
 }
 .info:nth-of-type(2){
-  top: -15%;
-  left: calc(-15% - 274px);
+  top: -10%;
+  left: calc(5% - 274px);
   transform: scale(.28, .85) translate(-10%,-10%);
 }
 .info:nth-of-type(3){
-  top: -15%;
-  right: calc(-15% - 274px);
+  top: -10%;
+  right: calc(5% - 274px);
   transform: scale(.28, .85) translate(10%,-10%);
 }
 .info:nth-of-type(4){
-  bottom: -20%;
-  left: calc(-15% - 274px);
+  bottom: -10%;
+  left: calc(5% - 274px);
   transform: scale(.28, .85) translate(-10%,10%);
 }
 .info:nth-of-type(5){
-  bottom: -20%;
-  right: calc(-15% - 274px);
+  bottom: -10%;
+  right: calc(5% - 274px);
   transform: scale(.28, .85) translate(10%,10%);
 }
-.info.show{
+.info.show, .info:hover{
   opacity: 1;
   transform: translate(0,0);
   background: #262626;
@@ -131,10 +131,10 @@ body>div{
 .desc > h3{
   transition-delay: 0;
 }
-.info.show > .icon{
+.info.show > .icon, .info:hover > .icon{
   transform: scale(1, 1);
 }
-.info.show > .desc{
+.info.show > .desc, .info:hover > .desc{
   opacity: 1;
   transform: translateX(0);
 }
