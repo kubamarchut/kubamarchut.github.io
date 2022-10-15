@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f54c8559bd3b84a84053030763046bff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f54c8559bd3b84a84053030763046bff" ></div>
+        
+</body>
+<script>    
+    
+            var map_f54c8559bd3b84a84053030763046bff = L.map(
+                "map_f54c8559bd3b84a84053030763046bff",
+                {
+                    center: [42.0, 12.083333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f4bdec5e7d0d78fb19bb0f3d4f90b70e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png",
+                {"attribution": "Jakub Marchut", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+            var marker_cluster_cb19a7022dc94f5199da9635e239e5b9 = L.markerClusterGroup(
+                {}
+            );
+            map_f54c8559bd3b84a84053030763046bff.addLayer(marker_cluster_cb19a7022dc94f5199da9635e239e5b9);
+        
+    
+            var circle_2f8fb1024faecaa02b01e9e96cb0e4fd = L.circle(
+                [41.8933203, 12.4829321],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37298.01572378571, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_e3990e9f23fcea5f7cae2923fd3d87c7 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_e15b0a0650aecf632791013f11d43d30 = $(`<div id="html_e15b0a0650aecf632791013f11d43d30" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Rome - Florence</li><li>Rome - Naples</li><li>Rome - Bari</li><li>Rome - Bologna</li><li>Rome - Milan</li></ul></div>`)[0];
+            popup_e3990e9f23fcea5f7cae2923fd3d87c7.setContent(html_e15b0a0650aecf632791013f11d43d30);
+        
+
+        circle_2f8fb1024faecaa02b01e9e96cb0e4fd.bindPopup(popup_e3990e9f23fcea5f7cae2923fd3d87c7)
+        ;
+
+        
+    
+    
+            circle_2f8fb1024faecaa02b01e9e96cb0e4fd.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Rome</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_53d0a4c72f0d421fd51ebdc799143d08 = L.circle(
+                [45.4641943, 9.1896346],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17727.034439507144, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_f16c0e49b4d5fc2fae8d0c52efcb930b = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_eed88303aa6744eb55fe477648302b27 = $(`<div id="html_eed88303aa6744eb55fe477648302b27" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Milan - Turin</li><li>Milan - Genoa</li><li>Milan - Rome</li></ul></div>`)[0];
+            popup_f16c0e49b4d5fc2fae8d0c52efcb930b.setContent(html_eed88303aa6744eb55fe477648302b27);
+        
+
+        circle_53d0a4c72f0d421fd51ebdc799143d08.bindPopup(popup_f16c0e49b4d5fc2fae8d0c52efcb930b)
+        ;
+
+        
+    
+    
+            circle_53d0a4c72f0d421fd51ebdc799143d08.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Milan</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_85c2f19fe5f9396db64c0288966c7d71 = L.circle(
+                [40.8358846, 14.2487679],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13703.877687278571, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_bfe387c7133cc97eae4d7f73eb56ceaa = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_74957d7103133fb30a9f55c56b0b9fa7 = $(`<div id="html_74957d7103133fb30a9f55c56b0b9fa7" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Naples - Palermo</li><li>Naples - Rome</li></ul></div>`)[0];
+            popup_bfe387c7133cc97eae4d7f73eb56ceaa.setContent(html_74957d7103133fb30a9f55c56b0b9fa7);
+        
+
+        circle_85c2f19fe5f9396db64c0288966c7d71.bindPopup(popup_bfe387c7133cc97eae4d7f73eb56ceaa)
+        ;
+
+        
+    
+    
+            circle_85c2f19fe5f9396db64c0288966c7d71.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Naples</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_71fe41713f31ca057b6585257e252cea = L.circle(
+                [45.0677551, 7.6824892],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12446.641202207142, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_304949ec5c3fa29d144b3c5119111e85 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_e8d5d77c02a1451d8d859b155358014f = $(`<div id="html_e8d5d77c02a1451d8d859b155358014f" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Turin - Milan</li></ul></div>`)[0];
+            popup_304949ec5c3fa29d144b3c5119111e85.setContent(html_e8d5d77c02a1451d8d859b155358014f);
+        
+
+        circle_71fe41713f31ca057b6585257e252cea.bindPopup(popup_304949ec5c3fa29d144b3c5119111e85)
+        ;
+
+        
+    
+    
+            circle_71fe41713f31ca057b6585257e252cea.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Turin</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c654201ba9e5325cd0548d9f3cef3f6f = L.circle(
+                [38.1112268, 13.3524434],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9387.365755199999, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_83e140b9f93fde9747c185f90fa0641e = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_ca2c0ad7c27907e5372e9be53fd5f04f = $(`<div id="html_ca2c0ad7c27907e5372e9be53fd5f04f" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Palermo - Naples</li><li>Palermo - Catania</li></ul></div>`)[0];
+            popup_83e140b9f93fde9747c185f90fa0641e.setContent(html_ca2c0ad7c27907e5372e9be53fd5f04f);
+        
+
+        circle_c654201ba9e5325cd0548d9f3cef3f6f.bindPopup(popup_83e140b9f93fde9747c185f90fa0641e)
+        ;
+
+        
+    
+    
+            circle_c654201ba9e5325cd0548d9f3cef3f6f.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Palermo</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_415d3d1f9d54b28f97e3754c10c2895a = L.circle(
+                [44.40726, 8.9338624],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8339.668684307142, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_43cf411c45e196f47324b0b528ea3a93 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_f664f13a652d3a87c828ed822e7e1e9d = $(`<div id="html_f664f13a652d3a87c828ed822e7e1e9d" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Genoa - Milan</li></ul></div>`)[0];
+            popup_43cf411c45e196f47324b0b528ea3a93.setContent(html_f664f13a652d3a87c828ed822e7e1e9d);
+        
+
+        circle_415d3d1f9d54b28f97e3754c10c2895a.bindPopup(popup_43cf411c45e196f47324b0b528ea3a93)
+        ;
+
+        
+    
+    
+            circle_415d3d1f9d54b28f97e3754c10c2895a.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Genoa</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_18dca8808f154b754f5ac85eb38f0665 = L.circle(
+                [44.4938203, 11.3426327],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5280.393237299999, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_ed24af8b799de8a99502e603955ed5ae = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_917373fb0b8d963e8d55fcf7ec25ddba = $(`<div id="html_917373fb0b8d963e8d55fcf7ec25ddba" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Bologna - Rome</li></ul></div>`)[0];
+            popup_ed24af8b799de8a99502e603955ed5ae.setContent(html_917373fb0b8d963e8d55fcf7ec25ddba);
+        
+
+        circle_18dca8808f154b754f5ac85eb38f0665.bindPopup(popup_ed24af8b799de8a99502e603955ed5ae)
+        ;
+
+        
+    
+    
+            circle_18dca8808f154b754f5ac85eb38f0665.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Bologna</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a8091074e375319a7029643773aeb427 = L.circle(
+                [43.7698712, 11.2555757],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5112.761705957142, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_f43e7199bf78ab1f172bc80144873b50 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_556b44ef6515c82866aa66c4af214b5b = $(`<div id="html_556b44ef6515c82866aa66c4af214b5b" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Florence - Rome</li></ul></div>`)[0];
+            popup_f43e7199bf78ab1f172bc80144873b50.setContent(html_556b44ef6515c82866aa66c4af214b5b);
+        
+
+        circle_a8091074e375319a7029643773aeb427.bindPopup(popup_f43e7199bf78ab1f172bc80144873b50)
+        ;
+
+        
+    
+    
+            circle_a8091074e375319a7029643773aeb427.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Florence</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fdbfbf0791a0814aa3f25c92ce77877b = L.circle(
+                [41.1257843, 16.8620293],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4484.143463421427, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_04cde8c4e539a6762ce060bed62c12a6 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_67c11001c78846084317945021fd35f0 = $(`<div id="html_67c11001c78846084317945021fd35f0" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Bari - Rome</li></ul></div>`)[0];
+            popup_04cde8c4e539a6762ce060bed62c12a6.setContent(html_67c11001c78846084317945021fd35f0);
+        
+
+        circle_fdbfbf0791a0814aa3f25c92ce77877b.bindPopup(popup_04cde8c4e539a6762ce060bed62c12a6)
+        ;
+
+        
+    
+    
+            circle_fdbfbf0791a0814aa3f25c92ce77877b.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Bari</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_06483198630af5a878cb36e81b50a269 = L.circle(
+                [37.5023612, 15.0873718],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4190.788283571428, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_b002177ed2a55512110785576e5b4251 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_64889c385691947afc2cfcddbf779d7a = $(`<div id="html_64889c385691947afc2cfcddbf779d7a" style="width: 100.0%; height: 100.0%;">List of connections:<br><ul><li>Catania - Palermo</li></ul></div>`)[0];
+            popup_b002177ed2a55512110785576e5b4251.setContent(html_64889c385691947afc2cfcddbf779d7a);
+        
+
+        circle_06483198630af5a878cb36e81b50a269.bindPopup(popup_b002177ed2a55512110785576e5b4251)
+        ;
+
+        
+    
+    
+            circle_06483198630af5a878cb36e81b50a269.bindTooltip(
+                `<div>
+                     <span style="font-size: 1.2em; font-weight: 600">Catania</span>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_34121eff64c71f55af6d95a9199f820b = L.polyline(
+                [[45.4641943, 9.1896346], [45.0677551, 7.6824892]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_6e6c6d142af50850cc81d4bb151210ef = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_09337f7ffc74edaed740b21669bbeb5e = $(`<div id="html_09337f7ffc74edaed740b21669bbeb5e" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>126.22km</b><br>estimated length of cable: <b>177.97km</b><br>estimated latency: <b>0.89ms</b><br></div>`)[0];
+            popup_6e6c6d142af50850cc81d4bb151210ef.setContent(html_09337f7ffc74edaed740b21669bbeb5e);
+        
+
+        poly_line_34121eff64c71f55af6d95a9199f820b.bindPopup(popup_6e6c6d142af50850cc81d4bb151210ef)
+        ;
+
+        
+    
+    
+            poly_line_34121eff64c71f55af6d95a9199f820b.bindTooltip(
+                `<div>
+                     connection from <b>Milan</b> to <b>Turin</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b96d8a2952d7906132eb6505a3281243 = L.polyline(
+                [[38.1112268, 13.3524434], [40.8358846, 14.2487679]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_48b666d14e50608fda745b9a5947e8af = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_30ce26206b022ec5bb0cf40ff86d8bf7 = $(`<div id="html_30ce26206b022ec5bb0cf40ff86d8bf7" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>312.18km</b><br>estimated length of cable: <b>440.17km</b><br>estimated latency: <b>2.20ms</b><br></div>`)[0];
+            popup_48b666d14e50608fda745b9a5947e8af.setContent(html_30ce26206b022ec5bb0cf40ff86d8bf7);
+        
+
+        poly_line_b96d8a2952d7906132eb6505a3281243.bindPopup(popup_48b666d14e50608fda745b9a5947e8af)
+        ;
+
+        
+    
+    
+            poly_line_b96d8a2952d7906132eb6505a3281243.bindTooltip(
+                `<div>
+                     connection from <b>Palermo</b> to <b>Naples</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d4a5f696dea6886b36c3e7953853c832 = L.polyline(
+                [[41.8933203, 12.4829321], [43.7698712, 11.2555757]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_0ab2eab4012aeb4e5e7ee677eb28d234 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_cd120562493b3168fe36401b908740b1 = $(`<div id="html_cd120562493b3168fe36401b908740b1" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>231.35km</b><br>estimated length of cable: <b>326.21km</b><br>estimated latency: <b>1.63ms</b><br></div>`)[0];
+            popup_0ab2eab4012aeb4e5e7ee677eb28d234.setContent(html_cd120562493b3168fe36401b908740b1);
+        
+
+        poly_line_d4a5f696dea6886b36c3e7953853c832.bindPopup(popup_0ab2eab4012aeb4e5e7ee677eb28d234)
+        ;
+
+        
+    
+    
+            poly_line_d4a5f696dea6886b36c3e7953853c832.bindTooltip(
+                `<div>
+                     connection from <b>Rome</b> to <b>Florence</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_393f02c7f8c2d57dd8367ac507c09f0b = L.polyline(
+                [[41.8933203, 12.4829321], [40.8358846, 14.2487679]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_38e522bc4060da21851c275d9a122464 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_503923b6c7a2099ce42c17a10efbfae0 = $(`<div id="html_503923b6c7a2099ce42c17a10efbfae0" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>188.73km</b><br>estimated length of cable: <b>266.11km</b><br>estimated latency: <b>1.33ms</b><br></div>`)[0];
+            popup_38e522bc4060da21851c275d9a122464.setContent(html_503923b6c7a2099ce42c17a10efbfae0);
+        
+
+        poly_line_393f02c7f8c2d57dd8367ac507c09f0b.bindPopup(popup_38e522bc4060da21851c275d9a122464)
+        ;
+
+        
+    
+    
+            poly_line_393f02c7f8c2d57dd8367ac507c09f0b.bindTooltip(
+                `<div>
+                     connection from <b>Rome</b> to <b>Naples</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5d586dba4e1fa3a5ff1d089f9494761b = L.polyline(
+                [[38.1112268, 13.3524434], [37.5023612, 15.0873718]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_3f36429720259a34bb572e6f00772208 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_415020bc8abf52f2f0462b39a60753e0 = $(`<div id="html_415020bc8abf52f2f0462b39a60753e0" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>167.06km</b><br>estimated length of cable: <b>235.55km</b><br>estimated latency: <b>1.18ms</b><br></div>`)[0];
+            popup_3f36429720259a34bb572e6f00772208.setContent(html_415020bc8abf52f2f0462b39a60753e0);
+        
+
+        poly_line_5d586dba4e1fa3a5ff1d089f9494761b.bindPopup(popup_3f36429720259a34bb572e6f00772208)
+        ;
+
+        
+    
+    
+            poly_line_5d586dba4e1fa3a5ff1d089f9494761b.bindTooltip(
+                `<div>
+                     connection from <b>Palermo</b> to <b>Catania</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_8aadf6bc3927a1887fc464f217f845f6 = L.polyline(
+                [[41.8933203, 12.4829321], [41.1257843, 16.8620293]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_ae79f8625b53d286879324623a26cd8a = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_0af9676ab7ec6ad1e7f6173ab900880f = $(`<div id="html_0af9676ab7ec6ad1e7f6173ab900880f" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>375.34km</b><br>estimated length of cable: <b>529.24km</b><br>estimated latency: <b>2.65ms</b><br></div>`)[0];
+            popup_ae79f8625b53d286879324623a26cd8a.setContent(html_0af9676ab7ec6ad1e7f6173ab900880f);
+        
+
+        poly_line_8aadf6bc3927a1887fc464f217f845f6.bindPopup(popup_ae79f8625b53d286879324623a26cd8a)
+        ;
+
+        
+    
+    
+            poly_line_8aadf6bc3927a1887fc464f217f845f6.bindTooltip(
+                `<div>
+                     connection from <b>Rome</b> to <b>Bari</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7ee36c24af7b0ccd7bc054ec86d441ce = L.polyline(
+                [[45.4641943, 9.1896346], [44.40726, 8.9338624]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_fd7a7ad285db1b372da927bcb1fb37f2 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_d95a8b68b0d68c90cff39efdc79a4971 = $(`<div id="html_d95a8b68b0d68c90cff39efdc79a4971" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>119.18km</b><br>estimated length of cable: <b>168.04km</b><br>estimated latency: <b>0.84ms</b><br></div>`)[0];
+            popup_fd7a7ad285db1b372da927bcb1fb37f2.setContent(html_d95a8b68b0d68c90cff39efdc79a4971);
+        
+
+        poly_line_7ee36c24af7b0ccd7bc054ec86d441ce.bindPopup(popup_fd7a7ad285db1b372da927bcb1fb37f2)
+        ;
+
+        
+    
+    
+            poly_line_7ee36c24af7b0ccd7bc054ec86d441ce.bindTooltip(
+                `<div>
+                     connection from <b>Milan</b> to <b>Genoa</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a45c35ae9968805ef1a034b8c96b7a86 = L.polyline(
+                [[41.8933203, 12.4829321], [44.4938203, 11.3426327]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_6064923c75f0006a6b4e958e438827f6 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_ba24e29751a354183c96d5eed74ae8be = $(`<div id="html_ba24e29751a354183c96d5eed74ae8be" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>303.40km</b><br>estimated length of cable: <b>427.80km</b><br>estimated latency: <b>2.14ms</b><br></div>`)[0];
+            popup_6064923c75f0006a6b4e958e438827f6.setContent(html_ba24e29751a354183c96d5eed74ae8be);
+        
+
+        poly_line_a45c35ae9968805ef1a034b8c96b7a86.bindPopup(popup_6064923c75f0006a6b4e958e438827f6)
+        ;
+
+        
+    
+    
+            poly_line_a45c35ae9968805ef1a034b8c96b7a86.bindTooltip(
+                `<div>
+                     connection from <b>Rome</b> to <b>Bologna</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0b3e177743f402aab5831d8912e89934 = L.polyline(
+                [[41.8933203, 12.4829321], [45.4641943, 9.1896346]],
+                {"bubblingMouseEvents": true, "color": "#5eee26", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5eee26", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f54c8559bd3b84a84053030763046bff);
+        
+    
+        var popup_7eb70045b6721b634f0aa4f6cfd2a304 = L.popup({"maxWidth": 300, "minWidth": 100});
+
+        
+            var html_d44b860cd1476d86a084ae549e656599 = $(`<div id="html_d44b860cd1476d86a084ae549e656599" style="width: 100.0%; height: 100.0%;">distance in straight line: <b>477.32km</b><br>estimated length of cable: <b>673.02km</b><br>estimated latency: <b>3.37ms</b><br></div>`)[0];
+            popup_7eb70045b6721b634f0aa4f6cfd2a304.setContent(html_d44b860cd1476d86a084ae549e656599);
+        
+
+        poly_line_0b3e177743f402aab5831d8912e89934.bindPopup(popup_7eb70045b6721b634f0aa4f6cfd2a304)
+        ;
+
+        
+    
+    
+            poly_line_0b3e177743f402aab5831d8912e89934.bindTooltip(
+                `<div>
+                     connection from <b>Rome</b> to <b>Milan</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
