@@ -70,11 +70,11 @@
 <body>    
     <div class="nav-panel">
         <h1>Find route</h1>
+        <div>
         <input type="text" list="cities"><br>
         <input type="text" list="cities"><br>
         <button>calculate</button><br>
         <span class="output"></span>
-        <nav class="host-list"></nav>
         <datalist id="cities">
             <option value="Rome">
             <option value="Milan">
@@ -87,7 +87,9 @@
             <option value="Bari">
             <option value="Catania">
         </datalist>
+        </div>
         
+        <nav class="host-list"></nav>
         <script>
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {Rome: {Milan: 336, Naples: 133, Palermo: 300, Bologna: 213, Florence: 163},
