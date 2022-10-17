@@ -19,7 +19,6 @@
             flex-direction: column;
         }
         .nav-panel{
-            width: max(300px, 25%);
             background: #223843;
             padding: 0 24px;
         }
@@ -32,9 +31,12 @@
         .nav-panel nav{
             color: #fff;
         }
-        @media only screen and (min-width: 400px) {
+        @media only screen and (min-width: 650px) {
           body {
             flex-direction: row;
+          }
+          .nav-panel{
+            width: max(300px, 25%);
           }
         }
     </style>
