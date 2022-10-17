@@ -16,6 +16,7 @@
         }
         body{
             display: flex;
+            flex-direction: column;
         }
         .nav-panel{
             width: max(300px, 25%);
@@ -30,6 +31,11 @@
         }
         .nav-panel nav{
             color: #fff;
+        }
+        @media only screen and (min-width: 400px) {
+          body {
+            flex-direction: row;
+          }
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
