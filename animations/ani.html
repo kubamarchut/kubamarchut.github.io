@@ -21,6 +21,7 @@
       height: 100vh;
     }
 
+
     svg * {
       transform-box: fill-box;
     }
@@ -104,11 +105,23 @@
         fill-opacity: .75;
       }
     }
+    @media (max-aspect-ratio: 4/3) {
+      #sky{
+        transform-origin: 50% 0%;
+        transform: scale(.75); 
+      }
+    }
+    @media (max-aspect-ratio: 9/16) {
+      #sky{
+        transform-origin: 50% 0%;
+        transform: scale(.5); 
+      }
+    }
   </style>
 </head>
 
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1122" height="801" viewBox="0 0 296.862 211.931">
+  <svg id="main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.862 211.931" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="b">
         <stop offset="0" style="stop-color:#173679;stop-opacity:1"/>
@@ -153,7 +166,6 @@
     <path d="m158.207 148.577-3.101.807-2.301 62.547h4.03zm2.094.013 1.025 63.34h4.027l-2.17-62.408z" style="color:#000;fill:#fc0;-inkscape-stroke:none"/>
     <path fill="none" stroke="#fff" stroke-width="2.415" d="m-.981 191.021 151.633-37.464"/>
     <path fill="#fff" stroke="#fff" stroke-width="2.415" d="m297.8 191.021-133.079-37.844"/>
-    <ellipse cx="227.53" cy="71.591" fill="#fff" rx="28.713" ry="28.608" style="paint-order:fill markers stroke;fill:#f5f3e9;fill-opacity:1"/>
     <g class="car" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501;opacity:1">
       <path fill="#67bef4" stroke="#000" stroke-width=".6" d="M133.592 151.597c-3.532.9-6.271 2.47-8.792 4.194l1.598 9.788 3.198-.699h59.952l3.198.699 1.598-9.788c-1.83-1.4-4.351-3.081-8.792-4.194Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path stroke="#000" stroke-width=".265" d="M180.755 173.969v4.894s.012.915.357 1.196c.308.251 1.241.202 1.241.202h4.796s.924.03 1.211-.229c.503-.455.388-1.868.388-1.868v-4.195Zm-50.361 0v4.894s.012.915.357 1.196c.308.251 1.242.202 1.242.202h4.796s.923.03 1.21-.229c.503-.455.389-1.868.389-1.868v-4.195Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
@@ -176,47 +188,50 @@
       <path fill="#b7c8c4" d="M157.944 160.062h3.198l-.372.622v.699h-2.398v-.699Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="url(#e)" d="M130.394 164.879s.24-4.701.8-6.991c.528-2.161 2.398-6.291 2.398-6.291s17.33-.965 26.006-.965c8.659 0 25.952.965 25.952.965s1.869 4.13 2.398 6.291c.56 2.291.799 6.991.799 6.991Z" style="fill:none;paint-order:markers stroke fill;stroke-dasharray:none;stroke-linejoin:miter;stroke-miterlimit:4;stroke-width:0"/>
     </g>
-    <ellipse cx="17.966" cy="26.641" fill="#fff" fill-opacity=".994" rx="1.584" ry="1.578" style="paint-order:fill markers stroke"/>
-    <ellipse cx="180.66" cy="17.851" fill="#fff" fill-opacity=".994" rx="2.263" ry="2.254" style="paint-order:fill markers stroke"/>
-    <ellipse cx="120.4" cy="22.421" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
-    <ellipse cx="79.509" cy="11.199" fill="#fff" fill-opacity=".994" rx=".368" ry=".367" style="paint-order:fill markers stroke"/>
-    <ellipse cx="155.35" cy="95.841" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
-    <ellipse cx="28.639" cy="95.151" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
-    <ellipse cx="40.374" cy="110.581" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="17.287" cy="119.971" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
-    <ellipse cx="5.691" cy="73.551" fill="#fff" fill-opacity=".994" rx="1.346" ry="1.341" style="paint-order:fill markers stroke"/>
-    <ellipse cx="33.127" cy="54.261" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
-    <ellipse cx="71.225" cy="32.601" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="97.522" cy="28.271" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="95.555" cy="46.321" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
-    <ellipse cx="185.32" cy="50.761" fill="#fff" fill-opacity=".994" rx=".828" ry=".825" style="paint-order:fill markers stroke"/>
-    <ellipse cx="157.98" cy="45.191" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="133.24" cy="35.391" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
-    <ellipse cx="156.22" cy="12.281" fill="#fff" fill-opacity=".994" rx="1.139" ry="1.135" style="paint-order:fill markers stroke"/>
-    <ellipse cx="287.81" cy="8.671" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="257.48" cy="15.791" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
-    <ellipse cx="276.73" cy="24.451" fill="#fff" fill-opacity=".994" rx="1.139" ry="1.135" style="paint-order:fill markers stroke"/>
-    <ellipse cx="251.37" cy="30.131" fill="#fff" fill-opacity=".994" rx=".828" ry=".825" style="paint-order:fill markers stroke"/>
-    <ellipse cx="215.75" cy="12.385" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
-    <ellipse cx="5.691" cy="73.551" fill="#fff" fill-opacity=".994" rx="1.346" ry="1.341" style="paint-order:fill markers stroke"/>
-    <ellipse cx="95.958" cy="87.567" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
-    <ellipse cx="58.553" cy="95.164" fill="#fff" fill-opacity=".994" rx="1.242" ry="1.238" style="paint-order:fill markers stroke"/>
-    <ellipse cx="89.736" cy="69.224" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.032" style="paint-order:fill markers stroke"/>
-    <ellipse cx="123.332" cy="61.477" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
-    <ellipse cx="110.858" cy="115.291" fill="#fff" fill-opacity=".994" rx="1.345" ry="1.341" style="paint-order:fill markers stroke"/>
-    <ellipse cx="78.519" cy="104.317" fill="#fff" fill-opacity=".994" rx=".931" ry=".929" style="paint-order:fill markers stroke"/>
-    <ellipse cx="95.958" cy="87.567" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
-    <ellipse cx="58.553" cy="95.164" fill="#fff" fill-opacity=".994" rx="1.242" ry="1.238" style="paint-order:fill markers stroke"/>
-    <ellipse cx="89.736" cy="69.224" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.032" style="paint-order:fill markers stroke"/>
-    <ellipse cx="123.332" cy="61.477" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
-    <ellipse cx="110.858" cy="115.291" fill="#fff" fill-opacity=".994" rx="1.345" ry="1.341" style="paint-order:fill markers stroke"/>
-    <ellipse cx="78.519" cy="104.317" fill="#fff" fill-opacity=".994" rx=".931" ry=".929" style="paint-order:fill markers stroke"/>
-    <ellipse cx="285.798" cy="89.878" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
-    <ellipse cx="270.41" cy="80.052" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
-    <ellipse cx="281.466" cy="44.539" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
-    <ellipse cx="274.324" cy="52.424" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
-    <ellipse cx="281.466" cy="44.539" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
-    <ellipse cx="274.324" cy="52.424" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+    <g id="sky">
+        <ellipse cx="227.53" cy="71.591" fill="#fff" rx="28.713" ry="28.608" style="paint-order:fill markers stroke;fill:#f5f3e9;fill-opacity:1"/>
+        <ellipse cx="17.966" cy="26.641" fill="#fff" fill-opacity=".994" rx="1.584" ry="1.578" style="paint-order:fill markers stroke"/>
+        <ellipse cx="180.66" cy="17.851" fill="#fff" fill-opacity=".994" rx="2.263" ry="2.254" style="paint-order:fill markers stroke"/>
+        <ellipse cx="120.4" cy="22.421" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
+        <ellipse cx="79.509" cy="11.199" fill="#fff" fill-opacity=".994" rx=".368" ry=".367" style="paint-order:fill markers stroke"/>
+        <ellipse cx="155.35" cy="95.841" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
+        <ellipse cx="28.639" cy="95.151" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
+        <ellipse cx="40.374" cy="110.581" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="17.287" cy="119.971" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
+        <ellipse cx="5.691" cy="73.551" fill="#fff" fill-opacity=".994" rx="1.346" ry="1.341" style="paint-order:fill markers stroke"/>
+        <ellipse cx="33.127" cy="54.261" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+        <ellipse cx="71.225" cy="32.601" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="97.522" cy="28.271" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="95.555" cy="46.321" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
+        <ellipse cx="185.32" cy="50.761" fill="#fff" fill-opacity=".994" rx=".828" ry=".825" style="paint-order:fill markers stroke"/>
+        <ellipse cx="157.98" cy="45.191" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="133.24" cy="35.391" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
+        <ellipse cx="156.22" cy="12.281" fill="#fff" fill-opacity=".994" rx="1.139" ry="1.135" style="paint-order:fill markers stroke"/>
+        <ellipse cx="287.81" cy="8.671" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="257.48" cy="15.791" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
+        <ellipse cx="276.73" cy="24.451" fill="#fff" fill-opacity=".994" rx="1.139" ry="1.135" style="paint-order:fill markers stroke"/>
+        <ellipse cx="251.37" cy="30.131" fill="#fff" fill-opacity=".994" rx=".828" ry=".825" style="paint-order:fill markers stroke"/>
+        <ellipse cx="215.75" cy="12.385" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.031" style="paint-order:fill markers stroke"/>
+        <ellipse cx="5.691" cy="73.551" fill="#fff" fill-opacity=".994" rx="1.346" ry="1.341" style="paint-order:fill markers stroke"/>
+        <ellipse cx="95.958" cy="87.567" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
+        <ellipse cx="58.553" cy="95.164" fill="#fff" fill-opacity=".994" rx="1.242" ry="1.238" style="paint-order:fill markers stroke"/>
+        <ellipse cx="89.736" cy="69.224" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.032" style="paint-order:fill markers stroke"/>
+        <ellipse cx="123.332" cy="61.477" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+        <ellipse cx="110.858" cy="115.291" fill="#fff" fill-opacity=".994" rx="1.345" ry="1.341" style="paint-order:fill markers stroke"/>
+        <ellipse cx="78.519" cy="104.317" fill="#fff" fill-opacity=".994" rx=".931" ry=".929" style="paint-order:fill markers stroke"/>
+        <ellipse cx="95.958" cy="87.567" fill="#fff" fill-opacity=".994" rx=".552" ry=".55" style="paint-order:fill markers stroke"/>
+        <ellipse cx="58.553" cy="95.164" fill="#fff" fill-opacity=".994" rx="1.242" ry="1.238" style="paint-order:fill markers stroke"/>
+        <ellipse cx="89.736" cy="69.224" fill="#fff" fill-opacity=".994" rx="1.035" ry="1.032" style="paint-order:fill markers stroke"/>
+        <ellipse cx="123.332" cy="61.477" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+        <ellipse cx="110.858" cy="115.291" fill="#fff" fill-opacity=".994" rx="1.345" ry="1.341" style="paint-order:fill markers stroke"/>
+        <ellipse cx="78.519" cy="104.317" fill="#fff" fill-opacity=".994" rx=".931" ry=".929" style="paint-order:fill markers stroke"/>
+        <ellipse cx="285.798" cy="89.878" fill="#fff" fill-opacity=".994" rx=".506" ry=".504" style="paint-order:fill markers stroke"/>
+        <ellipse cx="270.41" cy="80.052" fill="#fff" fill-opacity=".994" rx=".518" ry=".516" style="paint-order:fill markers stroke"/>
+        <ellipse cx="281.466" cy="44.539" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
+        <ellipse cx="274.324" cy="52.424" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+        <ellipse cx="281.466" cy="44.539" fill="#fff" fill-opacity=".994" rx=".932" ry=".928" style="paint-order:fill markers stroke"/>
+        <ellipse cx="274.324" cy="52.424" fill="#fff" fill-opacity=".994" rx=".621" ry=".619" style="paint-order:fill markers stroke"/>
+      </g>
     <path d="m178.221 243.217-6.916 4.73-3.095 4.573-7.135 1.7-7.79-6.385-6.592 5.878-6.47-1.653c-3.548 1.406-7.116 2.76-10.684 4.113l-7.771-.726-11.318-7.406-14.203 4.756c-4.218.241-5.474-6.223-9.69-6.3-5.585-.104-5.585-1.21-5.585-1.21l-5.585 3.628-4.128-.968-4.857-1.468s-4.86 3.046-11.53 5.078c-9.447 2.57-10.098-2.523-18.865-2.523-7.01.427-8.823 5.732-15.606 7.3-11.27 5.993-16.032 3.08-23.207 3.468l-11.086 2.068v4.27h-.002v42.525h298.78V261.87l-6.965-.922-7.906-5.13-1.68 4.26-3.77 1.567s-3.251-4.18-4.384-4.503l-2.672 1.21s-7.511-7.275-11.04-7.034c-1.972.134-9.7-6.608-9.7-6.608l-4.372 5.392-5.744 2.514s-3.383-3.217-6.539-3.217c-3.157 0-7.325-3.725-7.325-3.725-3.13 5.369-9.755 5.426-11.13 5.178-1.272-.23-3.199-2.253-3.199-2.253l-3.843 2.253-5.09-5.046-4.055 3.534-7.278-6.006.027-.117z" style="fill:#0b1e38;fill-opacity:1;stroke:none;paint-order:fill markers stroke"/>
   </svg>
 
