@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="1.0449438"
-     inkscape:cx="452.65591"
-     inkscape:cy="632.56989"
+     inkscape:zoom="2.0898876"
+     inkscape:cx="670.13173"
+     inkscape:cy="638.79034"
      inkscape:window-width="2560"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -215,7 +215,8 @@
   <path
      id="path48"
      style="color:#000000;fill:#ffcc00;-inkscape-stroke:none"
-     d="M 158.65055 148.57676 L 154.59913 149.38395 L 152.80492 211.93095 L 156.83413 211.93095 L 158.65055 148.57676 z M 159.50993 148.58968 L 161.32584 211.93095 L 165.35298 211.93095 L 163.56343 149.52193 L 159.50993 148.58968 z " />
+     d="m 158.20744,148.57676 -3.1019,0.80719 -2.30062,62.547 h 4.02921 z m 2.09375,0.0129 1.02465,63.34127 h 4.02714 l -2.16935,-62.40902 z"
+     sodipodi:nodetypes="cccccccccc" />
   <path
      fill="none"
      stroke="#ffffff"
