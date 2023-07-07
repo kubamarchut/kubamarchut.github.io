@@ -43,13 +43,31 @@
       }
     }
 
+    .break-lights{
+      animation: break-lights 5s ease-in-out infinite;
+    }
+
+    @keyframes break-lights {
+      0%, 20% {
+        fill: #f00;
+      }
+
+      35%, 50% {
+        fill: #600303;
+      }
+
+      85%, 90%, 100% {
+        fill: #f00;
+      }
+    }
+
     .car {
       animation: swing 5s ease-in-out infinite;
     }
 
     @keyframes swing {
       0% {
-        transform: translate(-10px, -5px) scale(.9);
+        transform: translate(-10px, -5px) scale(.75);
       }
 
       50% {
@@ -57,7 +75,7 @@
       }
 
       100% {
-        transform: translate(-10px, -5px) scale(.9);
+        transform: translate(-10px, -5px) scale(.75);
       }
     }
 
@@ -132,7 +150,7 @@
     <path fill="#00032b" d="m297.8 140.523-6.965-.922-7.906-5.13-1.681 4.26-3.77 1.568s-3.25-4.182-4.384-4.505l-2.671 1.21s-2.344-2.27-5.028-4.231c-2.121-1.55-4.455-2.909-6.013-2.802-1.972.134-9.7-6.608-9.7-6.608l-4.371 5.392-5.745 2.514s-3.382-3.217-6.538-3.217c-3.157 0-7.326-3.725-7.326-3.725-3.13 5.369-9.755 5.426-11.129 5.177-1.273-.23-3.2-2.252-3.2-2.252l-3.843 2.252-5.089-5.045-4.055 3.534-7.28-6.006.029-.116-6.917 4.73-3.095 4.572-7.135 1.7-7.789-6.385-6.593 5.879-6.47-1.654c-3.548 1.406-7.116 2.76-10.684 4.113l-7.771-.726-11.317-7.406-14.204 4.756c-4.218.241-5.474-6.222-9.69-6.3-5.584-.104-5.585-1.21-5.585-1.21l-5.585 3.628-4.128-.968-4.857-1.468s-4.86 3.046-11.53 5.079c-9.446 2.57-10.098-2.524-18.865-2.524-7.01.427-8.822 5.732-15.605 7.3-11.27 5.993-16.032 3.08-23.207 3.468l-11.087 2.068v2.138L297.8 143.77Z" style="fill:#1f3a70;fill-opacity:.60384601;stroke:none;filter:url(#d)"/>
     <path d="m191.135 123.452-6.917 4.73-3.095 4.573-7.135 1.7-7.79-6.385-6.592 5.878-6.47-1.653c-3.548 1.406-7.116 2.759-10.684 4.113l-7.771-.726-11.317-7.406-14.203 4.756c-4.219.241-5.475-6.223-9.691-6.3-5.584-.104-5.585-1.21-5.585-1.21L88.3 129.15l-4.128-.968-4.857-1.468s-4.86 3.046-11.53 5.079c-9.446 2.57-10.098-2.525-18.865-2.525-7.01.428-8.822 5.733-15.605 7.3-11.27 5.994-16.033 3.08-23.207 3.47L-.98 142.104v4.27h-.002V188.9H297.8v-40.416h.001v-6.379l-6.965-.922-7.906-5.13-1.681 4.26-3.77 1.568s-3.25-4.182-4.384-4.505l-2.671 1.21s-7.512-7.274-11.041-7.033c-1.972.134-9.7-6.608-9.7-6.608l-4.371 5.392-5.745 2.514s-3.382-3.217-6.538-3.217c-3.157 0-7.326-3.726-7.326-3.726-3.13 5.37-9.755 5.427-11.129 5.178-1.273-.23-3.2-2.252-3.2-2.252l-3.843 2.252-5.089-5.045-4.055 3.534-7.28-6.006.029-.117z" style="fill:#0b1e38;fill-opacity:1;stroke:none;paint-order:fill markers stroke"/>
     <path d="M159.08 148.491-.98 180.385v31.546H297.8v-31.546l-138.72-31.894z" style="fill:#333;fill-opacity:1"/>
-    <path d="m158.65 148.577-4.05.807-1.795 62.547h4.03l1.816-63.354zm.86.013 1.816 63.34h4.027l-1.79-62.408-4.053-.932z" style="color:#000;fill:#fc0;-inkscape-stroke:none"/>
+    <path d="m158.207 148.577-3.101.807-2.301 62.547h4.03zm2.094.013 1.025 63.34h4.027l-2.17-62.408z" style="color:#000;fill:#fc0;-inkscape-stroke:none"/>
     <path fill="none" stroke="#fff" stroke-width="2.415" d="m-.981 191.021 151.633-37.464"/>
     <path fill="#fff" stroke="#fff" stroke-width="2.415" d="m297.8 191.021-133.079-37.844"/>
     <ellipse cx="227.53" cy="71.591" fill="#fff" rx="28.713" ry="28.608" style="paint-order:fill markers stroke;fill:#f5f3e9;fill-opacity:1"/>
@@ -148,10 +166,10 @@
       <path fill="#776f64" stroke="#000" stroke-width=".6" d="M133.208 169.073h17.171v2.097h-16.786Zm35.556 0v2.097h16.786l.485-2.097Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="#262c2c" stroke="#000" stroke-width=".6" d="M145.583 169.073v2.097h4.796v-2.097Zm23.181 0v2.097h4.796v-2.097Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="#d5e5ff" stroke="#000" stroke-linejoin="round" stroke-width=".6" d="M140.787 143.907c1.598-.699 12.502-.708 18.762-.708 6.275 0 17.209.009 18.808.708 1.598.7 3.197 5.804 3.197 5.804s-14.653-.437-21.982-.437c-7.329 0-21.982.437-21.982.437s1.598-5.105 3.197-5.804Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
-      <path fill="red" stroke="#000" stroke-linejoin="round" stroke-width=".6" d="M192.746 165.58h3.197s-.799-9.788-1.599-9.788c-.799 0-1.598 9.788-1.598 9.788Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
+      <path class="break-lights" fill="red" stroke="#000" stroke-linejoin="round" stroke-width=".6" d="M192.746 165.58h3.197s-.799-9.788-1.599-9.788c-.799 0-1.598 9.788-1.598 9.788Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="url(#e)" stroke="#000" stroke-opacity=".926" stroke-width=".6" d="M130.394 164.879s.24-4.701.8-6.991c.528-2.161 2.398-6.291 2.398-6.291s17.33-.965 26.006-.965c8.659 0 25.952.965 25.952.965s1.869 4.13 2.398 6.291c.56 2.291.799 6.991.799 6.991Z" style="fill:url(#e);paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="url(#f)" d="m131.301 157.901 56.563-.005c.582 2.262.613 4.642.904 6.968h-58.355c.212-2.259.329-4.497.885-6.963Z" style="fill:url(#f);paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
-      <path fill="red" stroke="#000" stroke-width=".6" d="M123.201 165.58h3.197s-.799-9.788-1.599-9.788c-.799 0-1.598 9.788-1.598 9.788Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
+      <path class="break-lights" fill="red" stroke="#000" stroke-width=".6" d="M123.201 165.58h3.197s-.799-9.788-1.599-9.788c-.799 0-1.598 9.788-1.598 9.788Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501"/>
       <path fill="url(#g)" stroke="#000" stroke-width=".6" d="M122.4 166.977c0-.521.799-1.398.799-1.398h3.198l3.197-.699h59.953l3.197.699h3.198s.799.877.799 1.398c0 .521-.799 1.399-.799 1.399h-3.198l-2.398-.699h-61.551l-2.398.699H123.2s-.8-.878-.8-1.399Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501;fill-opacity:1;fill:url(#g)"/>
       <path fill="url(#h)" stroke="#000" stroke-width=".6" d="M192.746 165.58h3.197s.799.877.799 1.398c0 .521-.799 1.398-.799 1.398h-3.197s-.8-.877-.8-1.398c0-.521.8-1.398.8-1.398Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501;fill:url(#h)"/>
       <path fill="url(#i)" stroke="#000" stroke-width=".6" d="M123.201 165.58h3.197s.799.877.799 1.398c0 .521-.799 1.398-.799 1.398h-3.197s-.8-.877-.8-1.398c0-.521.8-1.398.8-1.398Z" style="paint-order:stroke markers fill;stroke-dasharray:none;stroke-width:1.00012501;fill:url(#i)"/>
