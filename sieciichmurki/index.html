@@ -35,14 +35,11 @@
         .nav-panel nav{
             color: #fff;
         }
-        .nav-panel p{
-            margin: 4px 0 2px;
-        }
         .nav-panel input, button{
             width: 100%;
             border: none;
-            border-radius: 6px;
-            padding: 6px 10px;
+            border-radius: 4px;
+            padding: 4px 6px;
         }
         .nav-panel input{
             margin: 0 0 6px;
@@ -52,6 +49,9 @@
         .nav-panel button{
             margin: 6px 0 6px;
             background: hsl(178, 31%, 42%);
+        }
+        .nav-panel p{
+            margin: 0;
         }
         .nav-panel .output{
             display: block;
@@ -73,6 +73,13 @@
             float: none;
             clear: both;
           }
+          .nav-panel input, button{
+            border-radius: 6px;
+            padding: 6px 10px;
+          }
+          .nav-panel p{
+            margin: 4px 0 2px;
+          }
           .cities-list{
             display: block;
           }
@@ -85,9 +92,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
                 #map_aa3afe7da31157e867e2ede9a84cd170 {
                     position: relative;
