@@ -59,7 +59,10 @@
             font-size: 1.2em;
             font-weight: 300;
         }
-        @media only screen and (min-width: 650px) {
+        .cities-list{
+            display: none;
+        }
+        @media only screen and (min-width: 768px) {
           body {
             flex-direction: row;
           }
@@ -69,6 +72,9 @@
             width: 300px;
             float: none;
             clear: both;
+          }
+          .cities-list{
+            display: block;
           }
         }
     </style>
@@ -107,6 +113,8 @@
             <button>calculate</button>
             <p>Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
             <span class="output">0.00 ms</span>
+        </div>
+        <div class="cities-list">
             <h2>List of available cities:</h2>
             <datalist id="cities">
                 <option value="Rome">
@@ -120,11 +128,11 @@
                 <option value="Bari">
                 <option value="Catania">
             </datalist>
+            <nav class="host-list">
+                <ul></ul>
+            </nav>
         </div>
         
-        <nav class="host-list">
-            <ul></ul>
-        </nav>
         <script>
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {Rome: {Milan: 336, Naples: 133, Palermo: 300, Bologna: 213, Florence: 163},
