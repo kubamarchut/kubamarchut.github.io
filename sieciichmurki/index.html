@@ -35,20 +35,29 @@
         .nav-panel nav{
             color: #fff;
         }
-        input, button{
+        .nav-panel p{
+            margin: 4px 0 2px;
+        }
+        .nav-panel input, button{
             width: 100%;
             border: none;
             border-radius: 6px;
             padding: 6px 10px;
         }
-        input{
+        .nav-panel input{
             margin: 0 0 6px;
-            background: hsl(178, 31%, 90%);
+            background: hsl(178, 31%, 85%);
             color: #000;
         }
-        button{
+        .nav-panel button{
             margin: 6px 0 6px;
             background: hsl(178, 31%, 42%);
+        }
+        .nav-panel .output{
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 300;
         }
         @media only screen and (min-width: 650px) {
           body {
@@ -56,6 +65,7 @@
           }
           .nav-panel{
             /*width: max(300px, 25%);*/
+            max-width: 300px;
             float: none;
             clear: both;
           }
@@ -89,26 +99,31 @@
     <div class="nav-panel">
         <h1>Find route</h1>
         <div>
-        <input type="text" list="cities"><br>
-        <input type="text" list="cities"><br>
-        <button>calculate</button><br>
-        <span class="output"></span>
-        <h2>List of available cities:</h2>
-        <datalist id="cities">
-            <option value="Rome">
-            <option value="Milan">
-            <option value="Naples">
-            <option value="Turin">
-            <option value="Palermo">
-            <option value="Genoa">
-            <option value="Bologna">
-            <option value="Florence">
-            <option value="Bari">
-            <option value="Catania">
-        </datalist>
+            <p>Enter starting city:</p>
+            <input type="text" list="cities">
+            <p>Enter destination city:</p>
+            <input type="text" list="cities">
+            <button>calculate</button>
+            <p>Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
+            <span class="output">0.00 ms</span>
+            <h2>List of available cities:</h2>
+            <datalist id="cities">
+                <option value="Rome">
+                <option value="Milan">
+                <option value="Naples">
+                <option value="Turin">
+                <option value="Palermo">
+                <option value="Genoa">
+                <option value="Bologna">
+                <option value="Florence">
+                <option value="Bari">
+                <option value="Catania">
+            </datalist>
         </div>
         
-        <nav class="host-list"></nav>
+        <nav class="host-list">
+            <ul></ul>
+        </nav>
         <script>
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {Rome: {Milan: 336, Naples: 133, Palermo: 300, Bologna: 213, Florence: 163},
@@ -126,7 +141,7 @@
             let btn = document.querySelector("button");
             let inputs = document.querySelectorAll("input[type=text]");
             let output = document.querySelector("span.output");
-            let hostList = document.querySelector("nav.host-list");
+            let hostList = document.querySelector("nav.host-list > ul");
             
             
             cities.forEach((city, index) => {
