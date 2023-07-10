@@ -64,13 +64,15 @@
         .nav-panel span {
             color: #fff;
         }
-
+        .nav-panel .form{
+            display: flex;
+            gap: 12px;
+        }
         .nav-panel nav {
             color: #fff;
         }
 
-        .nav-panel input,
-        button {
+        .nav-panel input, button {
             width: 100%;
             border: none;
             border-radius: 4px;
@@ -122,8 +124,10 @@
             .nav-panel h1 {
                 display: block;
             }
-            .nav-panel input,
-            button {
+            .nav-panel .form{
+                display: block;
+            }
+            .nav-panel input, button {
                 border-radius: 6px;
                 padding: 6px 10px;
             }
@@ -157,10 +161,16 @@
     <div class="nav-panel">
         <h1>Find route</h1>
         <div>
-            <p>Enter starting city:</p>
-            <input type="text" list="cities">
-            <p>Enter destination city:</p>
-            <input type="text" list="cities">
+            <div class="form">
+                <div class="form-element">
+                    <p>Enter starting city:</p>
+                    <input type="text" list="cities">
+                </div>
+                <div class="form-element">
+                    <p>Enter destination city:</p>
+                    <input type="text" list="cities">
+                </div>
+            </div>
             <button>calculate</button>
             <p>Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
             <span class="output">0.00 ms</span>
