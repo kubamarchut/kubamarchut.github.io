@@ -53,7 +53,7 @@
         .nav-panel {
             background: #223843;
             color: #fff;
-            padding: 14px 24px 6px;
+            padding: 14px 16px 6px;
         }
 
         .nav-panel h1 {
@@ -68,11 +68,14 @@
             display: flex;
             gap: 12px;
         }
+        .nav-panel .form-element{
+            flex: 1 1 0;
+        }
         .nav-panel nav {
             color: #fff;
         }
 
-        .nav-panel input, button {
+        .nav-panel input, button.form-button {
             width: 100%;
             border: none;
             border-radius: 4px;
@@ -85,7 +88,7 @@
             color: #000;
         }
 
-        .nav-panel button {
+        .nav-panel button.form-button {
             margin: 6px 0 6px;
             background: hsl(178, 31%, 42%);
         }
@@ -95,14 +98,42 @@
         }
 
         .nav-panel .output {
-            display: block;
+            display: inline-block;
             text-align: center;
             font-size: 1.2em;
             font-weight: 300;
         }
-
+        .nav-panel .output-desc {
+            display: inline-block;
+        }
+        .nav-panel .cities-toggle{
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 4px auto 0;
+            display: block;
+            text-decoration: underline;
+        }
         .cities-list {
             display: none;
+        }
+        .cities-list h2 {
+            font-size: 24px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+        }
+        .cities-list ol {
+            columns: 2;
+            padding-left: 16px;
+            counter-reset: item;
+            list-style-type: none;
+        }
+        .cities-list li::before {
+            content: "h" counter(item) ": ";
+            counter-increment: item;
+        }
+        .cities-list.visible {
+            display: block;
         }
 
         @media only screen and (min-width: 768px) {
@@ -127,7 +158,7 @@
             .nav-panel .form{
                 display: block;
             }
-            .nav-panel input, button {
+            .nav-panel input, button.form-button {
                 border-radius: 6px;
                 padding: 6px 10px;
             }
@@ -135,7 +166,15 @@
             .nav-panel p {
                 margin: 4px 0 2px;
             }
-
+            .nav-panel .output {
+                display: block;
+            }
+            .nav-panel .output-desc {
+                display: block;
+            }
+            .nav-panel .cities-toggle{
+                display: none;
+            }
             .cities-list {
                 display: block;
             }
@@ -171,9 +210,10 @@
                     <input type="text" list="cities">
                 </div>
             </div>
-            <button>calculate</button>
-            <p>Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
+            <button class="form-button">calculate</button>
+            <p class="output-desc">Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
             <span class="output">0.00 ms</span>
+            <button class="cities-toggle">show available cities list</button>
         </div>
         <div class="cities-list">
             <h2>List of available cities:</h2>
@@ -190,10 +230,22 @@
                 <option value="Catania">
             </datalist>
             <nav class="host-list">
-                <ul></ul>
+                <ol></ol>
             </nav>
         </div>
+        <script>
+            let citiesToggleBTN = document.querySelectorAll("button")[1];
+            let citiesListDIV = document.querySelector("div.cities-list");
+            let citiesToggleDesc = "hide";
 
+            citiesToggleBTN.addEventListener('click', () => {
+                let oldDesc = citiesToggleBTN.innerText.split(" ");
+                oldDesc.unshift(citiesToggleDesc);
+                citiesToggleDesc = oldDesc.splice(1, 1);
+                citiesToggleBTN.innerText = oldDesc.join(" ");
+                citiesListDIV.classList.toggle("visible");
+            });
+        </script>
         <script>
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {
@@ -212,11 +264,11 @@
             let btn = document.querySelector("button");
             let inputs = document.querySelectorAll("input[type=text]");
             let output = document.querySelector("span.output");
-            let hostList = document.querySelector("nav.host-list > ul");
+            let hostList = document.querySelector("nav.host-list > ol");
 
 
             cities.forEach((city, index) => {
-                hostList.innerHTML += "<li>h" + (index + 1) + ": " + city + "</li>";
+                hostList.innerHTML += "<li>" + city + "</li>";
             })
 
             btn.addEventListener("click", () => {
