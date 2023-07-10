@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         html,
         body {
@@ -40,7 +42,13 @@
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
-
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 600,
+            'GRAD' -25,
+            'opsz' 24
+        }
         * {
             font-family: 'Reem Kufi Ink', sans-serif;
         }
@@ -194,6 +202,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <script src="https://igor-vladyka.github.io/leaflet.motion/dist/leaflet.motion.min.js"></script>
 </head>
 
 <body>
@@ -211,7 +220,7 @@
                 </div>
             </div>
             <button class="form-button">calculate</button>
-            <p class="output-desc">Estimated latency between cities <abbr title="round-trip time">RTT</abbr>:</p>
+            <p class="output-desc"></p>
             <span class="output">0.00 ms</span>
             <button class="cities-toggle">show available cities list</button>
         </div>
@@ -247,6 +256,7 @@
             });
         </script>
         <script>
+            const foundPathMessage = "Path found! est. <abbr title=\"round-trip time\">RTT</abbr>: ";
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {
                 Rome: { Milan: 336, Naples: 133, Palermo: 300, Bologna: 213, Florence: 163 },
@@ -264,6 +274,7 @@
             let btn = document.querySelector("button");
             let inputs = document.querySelectorAll("input[type=text]");
             let output = document.querySelector("span.output");
+            let outputDesc = document.querySelector("p.output-desc");
             let hostList = document.querySelector("nav.host-list > ol");
 
 
@@ -282,14 +293,25 @@
                         return;
                     }
                     let result = findShortestPath(graph, inputs[0].value, inputs[1].value);
+                    outputDesc.innerHTML = foundPathMessage;
                     output.innerHTML = 2 * result.distance / 100 + " ms"
-
+                    let path = [];
+                    
                     for (let i = 1; i < result.path.length; i++) {
                         let pathNumber = links.indexOf(result.path[i - 1] + " - " + result.path[i]);
                         if (pathNumber == -1) pathNumber = links.indexOf(result.path[i] + " - " + result.path[i - 1]);
+                        path.push(coords[cities.indexOf(result.path[i-1])]);
+                        
                         linkPaths[cities.length + pathNumber].style.stroke = "#D62839";
                     }
-
+                    path.push(coords[cities.indexOf(result.path[result.path.length-1])]);
+                    
+                    let aniSpeed = result.distance;
+                    animatePath(path, aniSpeed)
+                    setTimeout(() => {animatePath(path.reverse(), aniSpeed)}, aniSpeed)
+                }
+                else{
+                    output.innerText = "couldn't find path for given endpoints"
                 }
             });
             let shortestDistanceNode = (distances, visited) => {
@@ -393,8 +415,8 @@
             preferCanvas: false,
         }
     );
-
-
+        let coords = []
+        map_aa3afe7da31157e867e2ede9a84cd170.addEventListener('layeradd', (e)=>{if(typeof e.layer.getLatLng === 'function') coords.push(e.layer.getLatLng())})
 
 
 
@@ -921,5 +943,21 @@
                  </div>`,
         { "sticky": true }
     );
-
+    let animatePath = (path, time) => {
+        let motion = L.motion.polyline(path, {
+            color: "transparent"
+        }, {
+            auto: true,
+            duration: time
+        }, {
+            removeOnEnd: true,
+            showMarker: true,
+            icon: L.divIcon({html: "<span class=\"material-symbols-outlined\">mail</span>", iconSize: L.point(32, 32)})
+        }).addTo(map_aa3afe7da31157e867e2ede9a84cd170);
+        motion.motionStart();
+        setTimeout(() =>{
+            let pathsToRem = document.querySelectorAll("path.leaflet-interactive");
+            pathsToRem[pathsToRem.length-1].remove();
+        }, time);
+    }
 </script>
