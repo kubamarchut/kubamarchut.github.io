@@ -311,7 +311,7 @@
                     }
                     path.push(coords[cities.indexOf(result.path[result.path.length-1])]);
                     
-                    let aniSpeed = result.distance;
+                    let aniSpeed = result.distance*10;
                     animatePath(path, aniSpeed)
                     setTimeout(() => {animatePath(path.reverse(), aniSpeed)}, aniSpeed)
                 }
