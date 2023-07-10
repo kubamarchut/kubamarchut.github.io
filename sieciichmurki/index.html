@@ -44,7 +44,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
         .material-symbols-outlined {
             font-variation-settings:
-            'FILL' 0,
+            'FILL' 1,
             'wght' 600,
             'GRAD' -25,
             'opsz' 24
@@ -142,6 +142,11 @@
         }
         .cities-list.visible {
             display: block;
+        }
+        .leaflet-div-icon{
+            background: transparent;
+            border: none;
+            color: #223843;
         }
 
         @media only screen and (min-width: 768px) {
@@ -952,7 +957,7 @@
         }, {
             removeOnEnd: true,
             showMarker: true,
-            icon: L.divIcon({html: "<span class=\"material-symbols-outlined\">mail</span>", iconSize: L.point(32, 32)})
+            icon: L.divIcon({html: "<span class=\"material-symbols-outlined\">mail</span>", iconSize: L.point(24, 24)})
         }).addTo(map_aa3afe7da31157e867e2ede9a84cd170);
         motion.motionStart();
         setTimeout(() =>{
