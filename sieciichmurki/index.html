@@ -262,6 +262,7 @@
         </script>
         <script>
             const foundPathMessage = "Path found! est. <abbr title=\"round-trip time\">RTT</abbr>: ";
+            let speedAdjustFactor = 100;
             let links = ["Turin - Milan", "Rome - Milan", "Genoa - Milan", "Catania - Palermo", "Rome - Naples", "Palermo - Rome", "Rome - Bologna", "Rome - Florence", "Bari - Naples"]
             let graph = {
                 Rome: { Milan: 336, Naples: 133, Palermo: 300, Bologna: 213, Florence: 163 },
@@ -311,7 +312,7 @@
                     }
                     path.push(coords[cities.indexOf(result.path[result.path.length-1])]);
                     
-                    let aniSpeed = result.distance*10;
+                    let aniSpeed = result.distance/100 * speedAdjustFactor;
                     animatePath(path, aniSpeed)
                     setTimeout(() => {animatePath(path.reverse(), aniSpeed)}, aniSpeed)
                 }
